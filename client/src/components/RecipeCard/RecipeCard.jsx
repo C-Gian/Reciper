@@ -6,10 +6,16 @@ export const RecipeCard = ({ recipe, saveRecipe, isRecipeSaved }) => {
     - image
     - title
     - description
-    - instructions
+    - instructions in step mode
+    - time to prepare
     - time to cook
+    - time to chill
+    - total time
+    - type of dish (appetizer, main, etc)
+    - healty, medium, unhealty
     - number of ingredients
     - ingredients
+    - date added
     - button to save
     
   */
