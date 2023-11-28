@@ -29,8 +29,14 @@
 
 .tab-content {
   padding: 10px;
-  background: #f60202;
   margin-top: 50px;
   width: 100%;
   height: fit-content;
+}
+
+.tab-panel {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  align-items: center;
 }
