@@ -1,5 +1,5 @@
-import { Home } from "./Home";
-import { Auth } from "./Auth";
+import { Home } from "./Home/Home";
+import { Auth } from "./Auth/Auth";
 import { CreateRecipe } from "./CreateRecipe";
 import { SavedRecipes } from "./SavedRecipes";
 
