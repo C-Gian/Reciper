@@ -1,0 +1,18 @@
+/* @font-face {
+  font-family: "Almarose-Thin";
+  src: url("./public/fonts/Almarose-Thin.otf") format("opentype");
+} */
+
+:root {
+  /*colors*/
+  --color-text: #fff;
+  --color-primary: #576cbc;
+  --color-secondary: #19376d;
+  --color-tertiary: #fe3e57;
+  --color-extra: #0bd7ce;
+  --color-dark: #0b2447;
+  --color-bg: #1a1a1a;
+
+  /* fonts */
+  /* --font-text-light: "Almarose-Thin"; */
+}

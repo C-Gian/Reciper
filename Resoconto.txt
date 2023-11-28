@@ -1,0 +1,20 @@
+RIASSUNTO:
+
+Front-end:
+	- Start: cd in client, npm start
+	- Learning:
+		-- Components e pages sono due cose diverse, i componenti sono elementi singoli che si riutilizzano, le pagine sono intere pagine in cui si usano i componenti ad esempio.
+		-- Cookies e LocalStorage
+	
+Back-end:
+	- Start server: cd in server poi node src/index.js OR npm start avendo aggiunto lo script in package json.
+
+	- Dependencies: 
+		-- express cors bcrypt jsonwebtoken mongoose nodemon node
+
+	- Learning:
+		-- In node, per far si di vedere applicate le modifiche al file index.js, bisogna andare in package.json e negli script mettere start e il path di index.js.
+		-- Ci sono due modi di importare le cose, require ed import, per usare il secondo bisogna mettere type module in package.json.
+		-- Postman, si usa per inviare richieste post e get e verificare endpoint applicazione senza avere front-end.
+		-- barrel import pattern, sostanzialmente nella cartella dei componenti si crea un index.js con dentro tutti gli import e solo l'export di tutti, poi dove
+			servono questi componenti si importano tutti i componenti insieme dalla cartella, javascript cercherà automaticamente index.js e quindi funziona.
