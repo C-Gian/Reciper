@@ -1,30 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const RecipeCard = ({ recipe }) => {
-  const [savedRecipes, setSavedRecipes] = useState([]);
-
-  const saveRecipe = async (recipeID) => {
-    try {
-      const response = await axios.put(
-        "http://localhost:3001/recipes",
-        {
-          recipeID,
-          userID,
-        },
-        { headers: { authorization: cookies.access_token } }
-      );
-      setSavedRecipes(response.data.savedRecipes);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const isRecipeSaved = (id) => {
-    return savedRecipes.includes(id);
-  };
-
+export const RecipeCard = ({ recipe, saveRecipe, isRecipeSaved }) => {
+  /*
+  Recipe components:
+    - image
+    - title
+    - description
+    - instructions
+    - time to cook
+    - number of ingredients
+    - ingredients
+    - button to save
+    
+  */
   return (
-    <div>
+    <div className="recipe-container">
       <div>
         <h2>{recipe.name}</h2>
         <button

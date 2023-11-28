@@ -15,16 +15,15 @@
 }
 
 .tabs li {
-  display: block;
-  padding: 10px 23px;
+  display: flex;
+  padding: 20px 50px;
   background: #fff;
-  margin-right: 12px;
-  border-radius: 6px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .tabs li.active {
-  background: #1c12db;
+  background: mediumaquamarine;
   color: #fff;
 }
 
