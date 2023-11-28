@@ -1,11 +1,17 @@
 import mongoose, { mongo } from "mongoose";
 
 const RecipeSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+  title: { type: String, required: true, unique: true },
+  imageUrl: { type: String, required: true },
   ingredients: [{ type: String, required: true }],
   instructions: { type: String, required: false },
-  imageUrl: { type: String, required: true },
-  cookingTime: { type: Number, required: true },
+  description: { type: String, required: false },
+  prepTime: { type: Number, required: false },
+  cookTime: { type: Number, required: false },
+  chillTime: { type: Number, required: false },
+  type: { type: String, required: true },
+  date: { type: Date, required: true },
+  healthy: { type: String, required: true },
   userOwner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "users",

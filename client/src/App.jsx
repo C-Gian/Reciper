@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Auth, CreateRecipe, SavedRecipes } from "./pages";
-import { Navbar } from "./components";
+import { Home, Auth } from "./pages";
+import { Navbar, CreateRecipe, SavedRecipes } from "./components";
 
 function App() {
   return (

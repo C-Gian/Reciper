@@ -1,7 +1,7 @@
 import React from "react";
 import "./RecipeCard.css";
 
-export const RecipeCard = ({ recipe, saveRecipe, isRecipeSaved }) => {
+export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
   /*
   Recipe components:
     - image*
@@ -56,10 +56,10 @@ export const RecipeCard = ({ recipe, saveRecipe, isRecipeSaved }) => {
           </div>
         </div>
         <button
-          onClick={() => saveRecipe(recipe._id)}
-          disabled={isRecipeSaved(recipe._id)}
+        /* onClick={() => saveRecipe(recipe._id)}
+          disabled={isRecipeSaved(recipe._id)} */
         >
-          {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
+          {/* {isRecipeSaved(recipe._id) ? "Saved" : "Save"} */}
         </button>
       </div>
     </div>

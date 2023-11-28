@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Tab.css";
-import { RecipeCard } from "../../components/RecipeCard/RecipeCard";
+import { RecipeCard } from "../RecipeCard/RecipeCard";
 import axios from "axios";
 import { useGetUserID } from "../../hooks/useGetUserID";
 import { useCookies } from "react-cookie";
@@ -10,7 +10,7 @@ export const Tab = () => {
   const [recipes, setRecipes] = useState([]);
   const userID = useGetUserID();
   const [cookies, _] = useCookies(["access_token"]);
-  const [savedRecipes, setSavedRecipes] = useState([]);
+  /* const [savedRecipes, setSavedRecipes] = useState([]); */
 
   useEffect(() => {
     const fectRecipes = async () => {
@@ -22,7 +22,7 @@ export const Tab = () => {
       }
     };
 
-    const fetchSavedRecipes = async () => {
+    /* const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
           `http://localhost:3001/recipes/savedRecipes/ids/${userID}`
@@ -31,15 +31,15 @@ export const Tab = () => {
       } catch (err) {
         console.log(err);
       }
-    };
+    }; */
 
     fectRecipes();
-    if (cookies.access_token) {
+    /* if (cookies.access_token) {
       fetchSavedRecipes();
-    }
+    } */
   }, []);
 
-  const saveRecipe = async (recipeID) => {
+  /* const saveRecipe = async (recipeID) => {
     try {
       const response = await axios.put(
         "http://localhost:3001/recipes",
@@ -53,11 +53,11 @@ export const Tab = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }; */
 
-  const isRecipeSaved = (id) => {
+  /* const isRecipeSaved = (id) => {
     return savedRecipes.includes(id);
-  };
+  }; */
 
   const handleTabClick = (id) => {
     setActiveTab(id);
@@ -99,8 +99,8 @@ export const Tab = () => {
               <RecipeCard
                 recipe={recipe}
                 key={recipe._id}
-                saveRecipe={saveRecipe}
-                isRecipeSaved={isRecipeSaved}
+                /* saveRecipe={saveRecipe}
+                isRecipeSaved={isRecipeSaved} */
               ></RecipeCard>
             ))}
           </div>

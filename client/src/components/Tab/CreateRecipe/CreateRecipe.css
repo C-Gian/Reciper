@@ -1,0 +1,34 @@
+@import "../../../vars.css";
+
+.create-recipe {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+}
+
+.cr-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cr-form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cr-form-timestypehealthy-container {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+
+.cr-form-times {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
