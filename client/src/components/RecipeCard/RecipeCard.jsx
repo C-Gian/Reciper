@@ -12,6 +12,7 @@ export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
     instructions,
     ingredients,
     difficulty,
+    price,
     type,
     healthy,
   } = recipe;
@@ -19,9 +20,6 @@ export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
     <div className="recipe-container">
       <div className="recipe-t-container">
         <img src={imageUrl} alt={title}></img>
-        <div className="recipet-type">
-          <label>{type}</label>
-        </div>
         <img
           src={
             difficulty === "easy"
@@ -33,6 +31,24 @@ export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
         ></img>
       </div>
       <div className="recipe-b-container">
+        <div className="recipeb-typeprice-container">
+          <div className="recipeb-type">
+            <label>{type}</label>
+          </div>
+          <div className="recipeb-price-container">
+            <img src="assets\images\recipecard\dollar_icon.png" alt="price" />
+            <img
+              src="assets\images\recipecard\dollar_icon.png"
+              alt="price"
+              className={price <= 5 ? "recipeb-dollar-disabled" : ""}
+            />
+            <img
+              src="assets\images\recipecard\dollar_icon.png"
+              alt="price"
+              className={price <= 10 ? "recipeb-dollar-disabled" : ""}
+            />
+          </div>
+        </div>
         <h1>{title}</h1>
         <div className="recipeb-tih-container">
           <div className="recipebtih-time">

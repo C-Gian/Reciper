@@ -20,6 +20,7 @@ export const CreateRecipe = () => {
     prepTime: 0,
     cookTime: 0,
     chillTime: 0,
+    price: 0,
     difficulty: "",
     type: "",
     healthy: "",
@@ -128,7 +129,7 @@ export const CreateRecipe = () => {
             onChange={handleTextSelectChange}
           ></textarea>
         </div>
-        <div className="cr-form-tthd-container">
+        <div className="cr-form-tthdp-container">
           <div className="cr-form-times">
             <div className="cr-form-time-prep">
               <label htmlFor="prepTime">Preparation Time</label>
@@ -204,6 +205,16 @@ export const CreateRecipe = () => {
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
+          </div>
+          <div className="cr-form-price">
+            <h1>Price</h1>
+            <input
+              id="platePrice"
+              value={recipe.price}
+              onChange={handleTextSelectChange}
+              name="price"
+              type="number"
+            ></input>
           </div>
         </div>
         <button type="submit">Submit</button>
