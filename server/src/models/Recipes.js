@@ -9,8 +9,9 @@ const RecipeSchema = new mongoose.Schema({
   prepTime: { type: Number, required: false },
   cookTime: { type: Number, required: false },
   chillTime: { type: Number, required: false },
+  difficulty: { type: String, required: false },
   type: { type: String, required: true },
-  date: { type: Date, required: true },
+  date: { type: String, required: true },
   healthy: { type: String, required: true },
   userOwner: {
     type: mongoose.Schema.Types.ObjectId,

@@ -2,55 +2,57 @@ import React from "react";
 import "./RecipeCard.css";
 
 export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
-  /*
-  Recipe components:
-    - image*
-    - title*
-    - description*
-    - instructions in step mode
-    - time to prepare
-    - time to cook
-    - time to chill
-    - total time*
-    - type of dish (appetizer, main, etc)*
-    - healty, medium, unhealty*
-    - number of ingredients*
-    - ingredients
-    - date added
-    - button to save*
-  */
+  const {
+    imageUrl,
+    title,
+    prepTime,
+    cookTime,
+    chillTime,
+    description,
+    instructions,
+    ingredients,
+    difficulty,
+    type,
+    healthy,
+  } = recipe;
   return (
     <div className="recipe-container">
       <div className="recipe-t-container">
-        <img
-          /* src={recipe.imageUrl} alt={recipe.name} */ src="\assets\images\recipecard\imagesample.png"
-        ></img>
+        <img src={imageUrl} alt={title}></img>
         <div className="recipet-type">
-          <label>Appetizer</label>
+          <label>{type}</label>
         </div>
-        <img src="\assets\images\recipecard\easy.png"></img>
+        <img
+          src={
+            difficulty === "easy"
+              ? "\\assets\\images\\recipecard\\easy.png"
+              : difficulty === "medium"
+              ? "assets\\images\\recipecard\\medium.png"
+              : "assets\\images\\recipecard\\hard.png"
+          }
+        ></img>
       </div>
       <div className="recipe-b-container">
-        <h1>{recipe.name}</h1>
+        <h1>{title}</h1>
         <div className="recipeb-tih-container">
           <div className="recipebtih-time">
             <div className="recipebtih-time-icontext">
               <img src="assets\images\recipecard\time_icon.png"></img>
-              <label>{recipe.cookingTime}</label>
+              <label>{prepTime + cookTime + chillTime}</label>
             </div>
             <label>Total time</label>
           </div>
           <div className="recipebtih-ingredients">
             <div className="recipebtih-ingredients-icontext">
               <img src="assets\images\recipecard\ingredients_icon.png"></img>
-              <label>{recipe.cookingTime}</label>
+              <label>{ingredients.length}</label>
             </div>
             <label>Ingredients</label>
           </div>
           <div className="recipebtih-healthy">
             <div className="recipebtih-healthy-icontext">
               <img src="assets\images\recipecard\healthy_icon.png"></img>
-              <label>{recipe.cookingTime}</label>
+              <label>{healthy}</label>
             </div>
             <label>Healthy</label>
           </div>
@@ -60,6 +62,7 @@ export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
           disabled={isRecipeSaved(recipe._id)} */
         >
           {/* {isRecipeSaved(recipe._id) ? "Saved" : "Save"} */}
+          Save
         </button>
       </div>
     </div>

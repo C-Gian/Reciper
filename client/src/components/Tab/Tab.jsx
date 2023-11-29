@@ -70,25 +70,13 @@ export const Tab = () => {
           className={activeTab === 1 ? "active" : ""}
           onClick={() => handleTabClick(1)}
         >
-          First Tab
+          Recipes
         </li>
         <li
           className={activeTab === 2 ? "active" : ""}
           onClick={() => handleTabClick(2)}
         >
-          Second Tab
-        </li>
-        <li
-          className={activeTab === 3 ? "active" : ""}
-          onClick={() => handleTabClick(3)}
-        >
-          Third Tab
-        </li>
-        <li
-          className={activeTab === 4 ? "active" : ""}
-          onClick={() => handleTabClick(4)}
-        >
-          Forth Tab
+          Saved Recipes
         </li>
       </ul>
 
@@ -106,8 +94,6 @@ export const Tab = () => {
           </div>
         )}
         {activeTab === 2 && <div className="tab-panel">Second tab content</div>}
-        {activeTab === 3 && <div className="tab-panel">Third tab content</div>}
-        {activeTab === 4 && <div className="tab-panel">Forth tab content</div>}
       </div>
     </div>
   );

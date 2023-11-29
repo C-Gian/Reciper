@@ -5,9 +5,11 @@ import { useGetUserID } from "../../../hooks/useGetUserID";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import "./CreateRecipe.css";
+import { format } from "date-fns";
 
 export const CreateRecipe = () => {
   const userID = useGetUserID();
+  const navigate = useNavigate();
   const [cookies, _] = useCookies(["access_token"]);
   const [recipe, setRecipe] = useState({
     imageUrl: "",
@@ -18,24 +20,14 @@ export const CreateRecipe = () => {
     prepTime: 0,
     cookTime: 0,
     chillTime: 0,
+    difficulty: "",
     type: "",
     healthy: "",
     date: "",
     userOwner: userID,
   });
-  const navigate = useNavigate();
-  const [selectedType, setSelectedType] = useState("");
-  const [selectedHealthy, setSelectedHealthy] = useState("");
 
-  const handleTypeChange = (event) => {
-    setSelectedType(event.target.value);
-  };
-
-  const handleHealthyChange = (event) => {
-    setSelectedHealthy(event.target.value);
-  };
-
-  const handleChange = (e) => {
+  const handleTextSelectChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
     setRecipe({ ...recipe, [name]: value });
@@ -56,12 +48,22 @@ export const CreateRecipe = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    const currentDate = format(new Date(), "dd/MM/yyyy");
+    const formDataWithDate = {
+      ...recipe,
+      date: currentDate,
+    };
     try {
-      await axios.post("http://localhost:3001/recipes", recipe, {
-        headers: { authorization: cookies.access_token },
-      });
+      const resp = await axios.post(
+        "http://localhost:3001/recipes",
+        formDataWithDate,
+        {
+          headers: { authorization: cookies.access_token },
+        }
+      );
+      console.log(resp);
       alert("recipe created");
-      navigate("/");
+      //navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -78,7 +80,7 @@ export const CreateRecipe = () => {
             placeholder="imageUrl"
             id="imageUrl"
             name="imageUrl"
-            onChange={handleChange}
+            onChange={handleTextSelectChange}
           ></input>
         </div>
         <div className="cr-form-title-container">
@@ -88,7 +90,7 @@ export const CreateRecipe = () => {
             placeholder="title"
             id="title"
             name="title"
-            onChange={handleChange}
+            onChange={handleTextSelectChange}
           ></input>
         </div>
         <div className="cr-form-description-container">
@@ -97,7 +99,7 @@ export const CreateRecipe = () => {
             placeholder="description"
             id="description"
             name="description"
-            onChange={handleChange}
+            onChange={handleTextSelectChange}
           ></textarea>
         </div>
         <div className="cr-form-ingredients-container">
@@ -123,11 +125,10 @@ export const CreateRecipe = () => {
             placeholder="instructions"
             id="instructions"
             name="instructions"
-            onChange={handleChange}
+            onChange={handleTextSelectChange}
           ></textarea>
         </div>
-
-        <div className="cr-form-timestypehealthy-container">
+        <div className="cr-form-tthd-container">
           <div className="cr-form-times">
             <div className="cr-form-time-prep">
               <label htmlFor="prepTime">Preparation Time</label>
@@ -136,7 +137,7 @@ export const CreateRecipe = () => {
                 placeholder="Preparation Time"
                 id="prepTime"
                 name="prepTime"
-                onChange={handleChange}
+                onChange={handleTextSelectChange}
               ></input>
             </div>
             <div className="cr-form-time-cook">
@@ -146,7 +147,7 @@ export const CreateRecipe = () => {
                 placeholder="Cooking Time"
                 id="cookTime"
                 name="cookTime"
-                onChange={handleChange}
+                onChange={handleTextSelectChange}
               ></input>
             </div>
             <div className="cr-form-time-chill">
@@ -156,34 +157,52 @@ export const CreateRecipe = () => {
                 placeholder="Chill Time"
                 id="chillTime"
                 name="chillTime"
-                onChange={handleChange}
+                onChange={handleTextSelectChange}
               ></input>
             </div>
           </div>
           <div className="cr-form-type">
-            <h1>Type</h1>
+            <h1>Dish Type</h1>
             <select
               id="plateType"
-              value={selectedType}
-              onChange={handleTypeChange}
+              value={recipe.type}
+              onChange={handleTextSelectChange}
+              name="type"
             >
-              <option value="">Seleziona un tipo</option>
-              <option value="primo">Primo</option>
-              <option value="secondo">Secondo</option>
-              <option value="contorno">Contorno</option>
+              <option value=""></option>
+              <option value="appetizer">Appetizer</option>
+              <option value="first course">First Course</option>
+              <option value="main course">Main Course</option>
+              <option value="side dish">Side Dish</option>
+              <option value="dessert">Dessert</option>
             </select>
           </div>
           <div className="cr-form-healthy">
             <h1>Healthy Level</h1>
             <select
               id="plateHealthy"
-              value={selectedHealthy}
-              onChange={handleHealthyChange}
+              value={recipe.healthy}
+              onChange={handleTextSelectChange}
+              name="healthy"
             >
-              <option value="">Seleziona un tipo</option>
-              <option value="primo">Primo</option>
-              <option value="secondo">Secondo</option>
-              <option value="contorno">Contorno</option>
+              <option value=""></option>
+              <option value="healthy">Healthy</option>
+              <option value="neutral">Neutral</option>
+              <option value="not healthy">Not Healthy</option>
+            </select>
+          </div>
+          <div className="cr-form-difficulty">
+            <h1>Difficulty Level</h1>
+            <select
+              id="plateDifficulty"
+              value={recipe.difficulty}
+              onChange={handleTextSelectChange}
+              name="difficulty"
+            >
+              <option value=""></option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
             </select>
           </div>
         </div>

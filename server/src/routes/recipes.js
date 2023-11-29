@@ -21,6 +21,7 @@ router.post("/", verifyToken, async (req, res) => {
     const response = await recipe.save();
     res.json(response);
   } catch (err) {
+    console.log(err);
     res.json(err);
   }
 });
@@ -37,7 +38,7 @@ router.put("/", verifyToken, async (req, res) => {
   }
 });
 
-router.get("/savedRecipes/ids/:userId", async (req, res) => {
+/* router.get("/savedRecipes/ids/:userId", async (req, res) => {
   try {
     const user = await UserModel.findById(req.params.userId);
     res.status(201).json({ savedRecipes: user?.savedRecipes });
@@ -57,6 +58,6 @@ router.get("/savedRecipes/:userId", async (req, res) => {
   } catch (err) {
     res.json(err);
   }
-});
+}); */
 
 export { router as recipesRouter };
