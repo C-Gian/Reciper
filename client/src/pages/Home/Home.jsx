@@ -1,12 +1,11 @@
 import React from "react";
 import "./Home.css";
-
-import { Tab } from "../../components/Tab/Tab";
+import { Utilitybar } from "../../components";
 
 export const Home = () => {
   return (
     <div className="homepage">
-      <Tab></Tab>
+      <Utilitybar></Utilitybar>
       {/* <ul>
         {recipes.map((recipe) => (
           <RecipeCard recipe={recipe} key={recipe._id}></RecipeCard>

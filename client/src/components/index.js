@@ -1,5 +1,5 @@
 import { Navbar } from "./Navbar/Navbar";
-import { CreateRecipe } from "./Tab/CreateRecipe/CreateRecipe";
-import { SavedRecipes } from "./Tab/SavedRecipes/SavedRecipes";
+import { Topbar } from "./Topbar/Topbar";
+import { Utilitybar } from "./Utilitybar/Utilitybar";
 
-export { Navbar, CreateRecipe, SavedRecipes };
+export { Navbar, Topbar, Utilitybar };

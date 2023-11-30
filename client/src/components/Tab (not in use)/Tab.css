@@ -10,6 +10,13 @@
   margin-top: 50px;
 }
 
+.tabs-utilbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .tabs {
   display: flex;
 }

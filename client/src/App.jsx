@@ -1,18 +1,19 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Auth } from "./pages";
-import { Navbar, CreateRecipe, SavedRecipes } from "./components";
+import { Home, Auth, MyRecipes, CreateRecipe } from "./pages";
+import { Navbar, Topbar } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Topbar></Topbar>
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/my-recipes" element={<MyRecipes />} />
           <Route path="/create-recipe" element={<CreateRecipe />} />
-          <Route path="/saved-recipes" element={<SavedRecipes />} />
         </Routes>
       </Router>
     </div>

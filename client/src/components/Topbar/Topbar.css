@@ -1,0 +1,14 @@
+@import "../../vars.css";
+
+.topbar-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar-container > h1 {
+  font-size: 70px;
+  font-family: var(--font-ballada);
+}

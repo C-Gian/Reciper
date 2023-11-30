@@ -4,6 +4,7 @@ import { RecipeCard } from "../RecipeCard/RecipeCard";
 import axios from "axios";
 import { useGetUserID } from "../../hooks/useGetUserID";
 import { useCookies } from "react-cookie";
+import { Searchbar } from "../Searchbar/Searchbar";
 
 export const Tab = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -65,20 +66,30 @@ export const Tab = () => {
 
   return (
     <div className="tabs-container">
-      <ul className="tabs">
-        <li
-          className={activeTab === 1 ? "active" : ""}
-          onClick={() => handleTabClick(1)}
-        >
-          Recipes
-        </li>
-        <li
-          className={activeTab === 2 ? "active" : ""}
-          onClick={() => handleTabClick(2)}
-        >
-          Saved Recipes
-        </li>
-      </ul>
+      <div className="tabs-utilbar">
+        <Searchbar></Searchbar>
+        <ul className="tabs">
+          <li
+            className={activeTab === 1 ? "active" : ""}
+            onClick={() => handleTabClick(1)}
+          >
+            All
+          </li>
+          <li
+            className={activeTab === 2 ? "active" : ""}
+            onClick={() => handleTabClick(2)}
+          >
+            My Recipes
+          </li>
+          <li
+            className={activeTab === 3 ? "active" : ""}
+            onClick={() => handleTabClick(3)}
+          >
+            Saved Recipes
+          </li>
+        </ul>
+        <div style={{ width: 30, height: 30, backgroundColor: "red" }}></div>
+      </div>
 
       <div className="tab-content">
         {activeTab === 1 && (
@@ -94,6 +105,7 @@ export const Tab = () => {
           </div>
         )}
         {activeTab === 2 && <div className="tab-panel">Second tab content</div>}
+        {activeTab === 3 && <div className="tab-panel">Third tab content</div>}
       </div>
     </div>
   );

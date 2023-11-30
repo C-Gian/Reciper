@@ -1,5 +1,22 @@
 RIASSUNTO:
 
+Idea:
+	Social network delle ricette, si può creare una ricetta, inserirla e vedere quelle degli altri utenti, potendole anche salvare e quindi fare proprie. 
+
+Cose da fare:
+	1. Creare ricette, home con tutte le ricette create, pagina/modale visualizzazione singola ricetta, searchbar, filtro ricette a seconda di type, diff, price, healthy, etc..
+	2. Rendere il tutto social media, quindi nella home vedere ricette di altri utenti, trasformare vecchia home in myrecipes e creare savedrecipe section.
+	3. Permettere agli utenti di seguirsi e quindi visualizzare le ricette di quella persona, quindi dividere home in profili seguiti, profili consigliati, etc...
+	4. Creare logica di like e commenti per le singole ricette con annesse notifiche.
+
+Pagine:
+	- pagina registrazione/login. [/]
+	- pagina home con profili seguiti, ricette popolari, ricette suggerite. [navbar]
+	- pagina myrecipes dove si vedono tutte le proprie ricette ed in un tab separato le proprie + quelle salvate. [navbar]
+	- pagina createrecipe dove si crea una recipe. [navbar]
+	- pagina visualizzazione ricetta, con tutte info complete quindi steps etc... + sotto ricette suggerite. [/]
+	- pagina profili utente, dove si vedono profili seguiti, ricette, immagine profilo, banner, descrizione profilo, etc... [navbar]
+
 Front-end:
 	- Start: cd in client, npm start
 	- Learning:
@@ -21,7 +38,3 @@ Back-end:
 
 
 
-Cose da fare:
-	- Searchbar
-	- Pagina/vista modale ricetta singola
-	- 

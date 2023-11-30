@@ -1,37 +1,122 @@
 @import "../../vars.css";
 
-.navbar {
+.navbar-container {
   position: sticky;
   display: flex;
   width: 100%;
   top: 0;
   height: 64px;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 1);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  justify-content: space-between;
-}
-
-.nb {
-  display: flex;
-  flex-direction: row;
+  padding: 10px;
+  margin-top: 25px;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbarl-img {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 25px;
+  pointer-events: none;
+}
+
+.navbar-space {
+  flex: 1;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 2vw;
+  flex: 2;
+}
+
+.navbarc-link {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbarc-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: gray;
+  transition: background-color 0.3s ease;
+}
+
+.navbarc-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease; /* Aggiungi una transizione per una transizione più fluida */
+}
+
+.navbarc-link:hover::after {
+  background-color: gray; /* Cambia il colore della sottolineatura al passaggio del cursore */
+}
+
+.navbar-notuser-container {
+  display: flex;
+  width: fit-content;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: #000000 solid 1px;
   padding: 10px;
 }
 
-.nb-left {
-  width: fit-content;
-  gap: 10px;
+.navbar-notuser-container > label {
+  font-size: 1.5vw;
+  text-decoration: none !important;
+  color: black;
+  cursor: pointer;
 }
 
-.nb-left > img {
+a {
+  text-decoration: none !important;
+}
+
+.navbar-user-container {
   width: auto;
-  height: 80%;
+  height: 30px;
 }
 
-.nb-right {
+.navbar-rll {
+  height: 100%;
   width: fit-content;
-  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.navbar-rrl-button {
+  width: auto;
+  height: 100%;
+  border: none; /* Rimuove il bordo */
+  background: none; /* Rimuove lo sfondo */
+  padding: 0; /* Rimuove il padding predefinito */
+  cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+  outline: none; /* Rimuove la bordatura quando il pulsante è focalizzato */
+}
+
+.navbar-rrl-button > img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

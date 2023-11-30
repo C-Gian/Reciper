@@ -1,11 +1,14 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import "./Navbar.css";
 
 export const Navbar = () => {
   const [cookies, setCookies] = useCookies(["access_token"]);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
 
   const logout = () => {
     setCookies("access_token", "");
@@ -14,21 +17,52 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
-      <div className="nb nb-left">
-        <img src="\assets\images\navbar\logo.png" alt="logo"></img>
-        <img src="\assets\images\navbar\logotext.png" alt="logotext"></img>
+    <div className="navbar-container">
+      <div className="navbar-space"></div>
+      <div className="navbar-links">
+        <Link
+          to="/"
+          className={`navbarc-link ${isActive("/") ? "active" : ""}`}
+        >
+          Home
+        </Link>
+        <Link
+          to={!cookies.access_token ? "/auth" : "/my-recipes"}
+          className={`navbarc-link ${isActive("/my-recipes") ? "active" : ""}`}
+        >
+          My Recipes
+        </Link>
+        <Link
+          to={!cookies.access_token ? "/auth" : "/create-recipe"}
+          className={`navbarc-link ${
+            isActive("/create-recipe") ? "active" : ""
+          }`}
+        >
+          Create Recipe
+        </Link>
       </div>
-      <div className="nb nb-right">
-        <Link to="/">Home</Link>
-        <Link to="/create-recipe">Create Recipe</Link>
+      <div className="navbar-rll">
         {!cookies.access_token ? (
-          <Link to="/auth">Login or Register</Link>
+          <Link to="/auth">
+            <div className="navbar-notuser-container">
+              <button className="navbar-rrl-button">
+                <img
+                  src="\assets\images\navbar\user_icon.png"
+                  alt="user logged"
+                />
+              </button>
+              <label>accedi</label>
+            </div>
+          </Link>
         ) : (
-          <>
-            <Link to="/saved-recipes">Saved Recipes</Link>
-            <button onClick={logout}>Logout</button>
-          </>
+          <div className="navbar-user-container">
+            <button onClick={logout} className="navbar-rrl-button">
+              <img
+                src="\assets\images\navbar\user_icon.png"
+                alt="user logged"
+              />
+            </button>
+          </div>
         )}
       </div>
     </div>
