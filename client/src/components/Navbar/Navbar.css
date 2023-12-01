@@ -1,7 +1,6 @@
 @import "../../vars.css";
 
 .navbar-container {
-  position: sticky;
   display: flex;
   width: 100%;
   top: 0;

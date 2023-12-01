@@ -1,1 +1,15 @@
 @import "../../vars.css";
+
+.myrecipes-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.myrecipes-recipes {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}

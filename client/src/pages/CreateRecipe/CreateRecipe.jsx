@@ -20,6 +20,8 @@ export const CreateRecipe = () => {
     prepTime: 0,
     cookTime: 0,
     chillTime: 0,
+    totalRatings: 0,
+    ratingVote: 0,
     price: 0,
     difficulty: "",
     type: "",

@@ -13,6 +13,8 @@ const RecipeSchema = new mongoose.Schema({
   type: { type: String, required: true },
   date: { type: String, required: true },
   price: { type: Number, required: false },
+  totalRatings: { type: Number, required: false },
+  ratingVote: { type: Number, required: false },
   healthy: { type: String, required: false },
   userOwner: {
     type: mongoose.Schema.Types.ObjectId,

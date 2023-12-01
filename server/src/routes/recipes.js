@@ -38,6 +38,21 @@ router.put("/", verifyToken, async (req, res) => {
   }
 });
 
+router.put("/update", async (req, res) => {
+  const { newReviewVote, newTotalReviews, recipeID } = req.body;
+  try {
+    const updatedRecipe = await RecipeModel.findByIdAndUpdate(
+      recipeID,
+      { $set: { ratingVote: newReviewVote, totalRatings: newTotalReviews } },
+      { new: true }
+    );
+    res.json(updatedRecipe);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Errore nell aggiornamento della ricetta" });
+  }
+});
+
 /* router.get("/savedRecipes/ids/:userId", async (req, res) => {
   try {
     const user = await UserModel.findById(req.params.userId);

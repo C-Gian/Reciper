@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Auth, MyRecipes, CreateRecipe } from "./pages";
+import { Home, Auth, MyRecipes, Recipe, CreateRecipe } from "./pages";
 import { Navbar, Topbar } from "./components";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/my-recipes" element={<MyRecipes />} />
+          <Route path="/recipe" element={<Recipe />} />
           <Route path="/create-recipe" element={<CreateRecipe />} />
         </Routes>
       </Router>

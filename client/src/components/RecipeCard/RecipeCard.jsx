@@ -1,7 +1,8 @@
 import React from "react";
 import "./RecipeCard.css";
+import { Link } from "react-router-dom";
 
-export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
+export const RecipeCard = ({ recipe }) => {
   const {
     imageUrl,
     title,
@@ -17,7 +18,13 @@ export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
     healthy,
   } = recipe;
   return (
-    <div className="recipe-container">
+    <Link
+      to={{
+        pathname: "/recipe",
+      }}
+      state={recipe}
+      className="recipe-container"
+    >
       <div className="recipe-t-container">
         <img src={imageUrl} alt={title}></img>
         <img
@@ -81,6 +88,6 @@ export const RecipeCard = ({ recipe /* , saveRecipe, isRecipeSaved */ }) => {
           Save
         </button>
       </div>
-    </div>
+    </Link>
   );
 };
