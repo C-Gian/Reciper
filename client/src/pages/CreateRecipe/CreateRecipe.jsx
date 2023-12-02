@@ -16,7 +16,7 @@ export const CreateRecipe = () => {
     title: "",
     description: "",
     ingredients: [],
-    instructions: "",
+    instructions: [],
     prepTime: 0,
     cookTime: 0,
     chillTime: 0,
@@ -40,6 +40,10 @@ export const CreateRecipe = () => {
     const ingredients = [...recipe.ingredients, ""];
     setRecipe({ ...recipe, ingredients });
   };
+  const handleAddInstruction = () => {
+    const instructions = [...recipe.instructions, ""];
+    setRecipe({ ...recipe, instructions });
+  };
 
   const handleIngredientChange = (e, index) => {
     e.preventDefault();
@@ -47,6 +51,14 @@ export const CreateRecipe = () => {
     const ingredients = recipe.ingredients;
     ingredients[index] = value;
     setRecipe({ ...recipe, ingredients });
+  };
+
+  const handleInstructionChange = (e, index) => {
+    e.preventDefault();
+    const { value } = e.target;
+    const instructions = recipe.instructions;
+    instructions[index] = value;
+    setRecipe({ ...recipe, instructions });
   };
 
   const onSubmit = async (e) => {
@@ -124,12 +136,20 @@ export const CreateRecipe = () => {
         </div>
         <div className="cr-form-instructions-container">
           <label htmlFor="instructions">instructions</label>
-          <textarea
-            placeholder="instructions"
-            id="instructions"
-            name="instructions"
-            onChange={handleTextSelectChange}
-          ></textarea>
+          {recipe.instructions.map((instruction, index) => (
+            <input
+              key={index}
+              type="text"
+              name="instructions"
+              value={instruction}
+              onChange={(e) => {
+                handleInstructionChange(e, index);
+              }}
+            ></input>
+          ))}
+          <button type="button" onClick={handleAddInstruction}>
+            Add instruction
+          </button>
         </div>
         <div className="cr-form-tthdp-container">
           <div className="cr-form-times">

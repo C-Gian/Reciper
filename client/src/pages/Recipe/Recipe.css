@@ -1,5 +1,13 @@
 @import "../../vars.css";
 
+* {
+  font-family: var(--font-base);
+  font-size: 1.125rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
 .recipefull-container {
   width: 800px;
   display: flex;
@@ -97,7 +105,7 @@
   flex-direction: column;
   height: fit-content;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .recipefull-img-main {
@@ -125,17 +133,89 @@
 .recipefull-infos-container {
   display: flex;
   padding: 10px;
-  gap: 100px;
   flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 70px;
 }
 
 .recipefull-info-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 150px;
 }
 
 .recipefull-info-container > h1 {
-  font-size: 1.5vw;
   font-weight: bold;
+  text-underline-offset: 0.25rem;
+}
+
+.recipefull-insing-container {
+  display: flex;
+  height: 600px;
+}
+
+.recipefull-instructions {
+  flex: 1;
+}
+
+.recipefull-ingredients {
+  flex: 1;
+}
+
+.recipefull-instructions > h1,
+.recipefull-ingredients > h1 {
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 32px;
+  font-family: var(--font-header);
+  --current-line-height: 32px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.recipefullins-li,
+.recipefulling-li {
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  --current-line-height: 24px;
+  letter-spacing: 0;
+  page-break-inside: avoid;
+}
+
+.recipefull-instructions > ol {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: my-counter;
+}
+
+.recipefull-instructions > ol .recipefullins-li {
+  margin-bottom: 8px; /* Imposta la distanza tra gli elementi nell'elenco */
+  position: relative;
+}
+
+.recipefull-instructions > ol .recipefullins-li::before {
+  content: counter(my-counter) ". ";
+  counter-increment: my-counter;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  width: 2em; /* Imposta la larghezza del numero */
+}
+
+.recipefull-ingredients > ul {
+  list-style-type: disc;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.recipefull-ingredients > ul .recipefulling-li {
+  margin-bottom: 8px; /* Imposta la distanza tra gli elementi nell'elenco */
+}
+
+.recipefull-ingredients > ul .recipefulling-li::before {
+  width: 2em; /* Imposta la larghezza del numero */
 }

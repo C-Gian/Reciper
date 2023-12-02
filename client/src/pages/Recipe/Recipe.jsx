@@ -7,6 +7,7 @@ import axios from "axios";
 export const Recipe = () => {
   let { state } = useLocation();
   const [rating, setRating] = useState(state.ratingVote);
+
   const updateReview = async (recipeID, vote) => {
     try {
       // Invia una richiesta PUT al server per aggiornare la ricetta
@@ -23,7 +24,6 @@ export const Recipe = () => {
     }
   };
 
-  // Catch Rating value
   const handleRating = (rate) => {
     setRating(rate);
     updateReview(state._id, rate);
@@ -120,16 +120,34 @@ export const Recipe = () => {
           </label>
         </div>
         <div className="recipefull-info-container">
-          <h1>Tot. Time:</h1>
-          <label>
-            {ConvertiMinuti(state.prepTime + state.cookTime + state.chillTime)}
-          </label>
+          <h1>Healthy:</h1>
+          <label>{state.healthy}</label>
         </div>
         <div className="recipefull-info-container">
-          <h1>Tot. Time:</h1>
-          <label>
-            {ConvertiMinuti(state.prepTime + state.cookTime + state.chillTime)}
-          </label>
+          <h1>Price:</h1>
+          <label>{state.price + " $"}</label>
+        </div>
+      </div>
+      <div className="recipefull-insing-container">
+        <div className="recipefull-instructions">
+          <h1>Instructions:</h1>
+          <ol>
+            {state.instructions.map((istruzione, index) => (
+              <li className="recipefullins-li" key={index}>
+                {istruzione}{" "}
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div className="recipefull-ingredients">
+          <h1>Ingredients:</h1>
+          <ul>
+            {state.ingredients.map((ingrediente, index) => (
+              <li className="recipefulling-li" key={index}>
+                {ingrediente}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <div style={{ height: 200 }}></div>
