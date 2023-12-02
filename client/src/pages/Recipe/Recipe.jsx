@@ -2,10 +2,111 @@ import React, { useState } from "react";
 import "./Recipe.css";
 import { Link, useLocation } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
+import { QandA } from "../../components/QandA/QandA";
 import axios from "axios";
 
 export const Recipe = () => {
   let { state } = useLocation();
+  const qas = [
+    {
+      user: "CELIA DEPTULA",
+      message: "How do I store these?",
+      replies: [
+        {
+          user: "PALATABLEPASTIME",
+          replyTo: "CELIA DEPTULA",
+          message:
+            "I store chewy cookies in a sealed plastic container. Keeps them fresh longer.",
+        },
+        {
+          user: "DOGMOPKC",
+          replyTo: "PALATABLEPASTIME",
+          message: "could I use these as a bar cookie? Would I use a 9x12 pan?",
+        },
+        {
+          user: "IRA4KIDS",
+          replyTo: "DOGMOPKC",
+          message:
+            "I would like to cut back on the sugar, any problems an/or soultions?",
+        },
+        {
+          user: "STEFCLARK88",
+          replyTo: "IRA4KIDS",
+          message:
+            "This says drop by teaspoonful, not Tablespoon, is that correct?",
+        },
+      ],
+    },
+    {
+      user: "PIGGYPETE",
+      message: "How can I make this recipe printable",
+      replies: [],
+    },
+    {
+      user: "COOKINGAFICIONADO",
+      message: "What's the best substitute for cream in this recipe?",
+      replies: [
+        {
+          user: "DAIRYFREEEATER",
+          replyTo: "COOKINGAFICIONADO",
+          message:
+            "You can try using coconut milk as a dairy-free alternative.",
+        },
+        {
+          user: "HEALTHYCHOICES",
+          replyTo: "DAIRYFREEEATER",
+          message: "Consider almond milk for a lighter option.",
+        },
+      ],
+    },
+    {
+      user: "CHEFSPECIALIST",
+      message: "Can I use olive oil instead of butter in baking?",
+      replies: [
+        {
+          user: "OLIVEOILEXPERT",
+          replyTo: "CHEFSPECIALIST",
+          message:
+            "Yes, you can use olive oil, but be mindful of the flavor impact.",
+        },
+      ],
+    },
+    {
+      user: "FITNESSFOODIE",
+      message: "What's a healthy alternative to sugar in desserts?",
+      replies: [
+        {
+          user: "NATURALSWEEETENER",
+          replyTo: "FITNESSFOODIE",
+          message:
+            "Consider using natural sweeteners like honey or maple syrup.",
+        },
+      ],
+    },
+    {
+      user: "GLOBALFLAVORS",
+      message: "Any tips for making a perfect curry?",
+      replies: [
+        {
+          user: "CURRYEXPERT",
+          replyTo: "GLOBALFLAVORS",
+          message: "Balance the spices and let it simmer for rich flavors.",
+        },
+      ],
+    },
+    {
+      user: "BAKINGENTHUSIAST",
+      message: "How do I achieve a flaky pie crust?",
+      replies: [
+        {
+          user: "PASTRYPRO",
+          replyTo: "BAKINGENTHUSIAST",
+          message:
+            "Use cold butter and don't overwork the dough for a flaky crust.",
+        },
+      ],
+    },
+  ];
   const [rating, setRating] = useState(state.ratingVote);
 
   const updateReview = async (recipeID, vote) => {
@@ -69,7 +170,7 @@ export const Recipe = () => {
           <div className="recipefull-author">
             <img src="\assets\images\recipe\profile_icon.png"></img>
             <Link to="/" className="recipefull-authorname">
-              <label>Gianluca Culaon{/* {state.owner.name} */}</label>
+              <label>C-Gian{/* {state.owner.name} */}</label>
             </Link>
           </div>
           {/* <div className="recipefull-divider"></div>
@@ -148,6 +249,21 @@ export const Recipe = () => {
               </li>
             ))}
           </ul>
+        </div>
+      </div>
+      <div className="recipefull-qa-container">
+        <h1>QUESTIONS</h1>
+        <div className="recipefullqa-ask">
+          <Link to="/">
+            <img src="\assets\images\recipe\profile_icon.png"></img>
+          </Link>
+          <input type="text" placeholder="Ask a question"></input>
+          <button>Submit</button>
+        </div>
+        <div className="recipefullqa-qrs">
+          {qas.map((qa, index) => (
+            <QandA qa={qa} key={index}></QandA>
+          ))}
         </div>
       </div>
       <div style={{ height: 200 }}></div>
