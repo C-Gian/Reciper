@@ -1,0 +1,33 @@
+@import "../../vars.css";
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid #e7e7e7;
+  margin-top: 20px;
+}
+
+.review-author-vote {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-author > a > img {
+  width: 30px;
+  height: auto;
+  object-fit: cover;
+}
+
+.review-container > p {
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}

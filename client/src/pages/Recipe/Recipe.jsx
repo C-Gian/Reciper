@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Recipe.css";
 import { Link, useLocation } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
-import { QandA } from "../../components/QandA/QandA";
+import { QandA, Review } from "../../components/index";
 import axios from "axios";
 
 export const Recipe = () => {
@@ -318,7 +318,7 @@ export const Recipe = () => {
           ))}
           {qasVisibleData.length < qas.length ? (
             <div
-              className="recipefullqa-loadmore"
+              className="recipefull-loadmore"
               onClick={() => setQasIndexndex(qasIndex + 1)}
             >
               <span>Load More Questions</span>
@@ -372,16 +372,16 @@ export const Recipe = () => {
             <span>Write A Review</span>
           </button>
         </div>
-        {/* <div className="recipefullqa-qrs">
-          {reviewsVisibleData.map((qa, index) => (
-            <QandA qa={qa} index={index}></QandA>
+        <div className="recipefullr-reviews">
+          {reviewsVisibleData.map((review, index) => (
+            <Review review={review} index={index}></Review>
           ))}
-          {reviewsVisibleData.length < qas.length ? (
+          {reviewsVisibleData.length < reviews.length ? (
             <div
-              className="recipefullqa-loadmore"
-              onClick={() => setIndex(index + 1)}
+              className="recipefull-loadmore"
+              onClick={() => setReviewsIndex(reviewsIndex + 1)}
             >
-              <span>Load More Questions</span>
+              <span>Load More Reviews</span>
               <svg
                 width="12"
                 height="12"
@@ -403,8 +403,10 @@ export const Recipe = () => {
           ) : (
             <></>
           )}
-        </div> */}
+        </div>
       </div>
+      <div>You'll also love</div>
+      <div>footer</div>
       <div
         style={{
           height: 500,
