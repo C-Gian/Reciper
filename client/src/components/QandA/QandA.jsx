@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./QandA.css";
 
-export const QandA = ({ qa }) => {
+export const QandA = ({ qa, index }) => {
   return (
-    <div className="qanda-container">
+    <div className="qanda-container" key={index}>
       <div className="qanda-t-container">
         <div className="qanda-userasking-container">
           <div className="qanda-userasking">
@@ -19,9 +19,9 @@ export const QandA = ({ qa }) => {
       </div>
       <div className="qanda-replies-container">
         {qa.replies.map((reply, rIndex) => (
-          <>
-            <div className="qanda-reply-container" key={rIndex}>
-              <div key={rIndex} className="qandar-container">
+          <div key={rIndex}>
+            <div className="qanda-reply-container">
+              <div className="qandar-container">
                 <div className="qandar-user-replying">
                   <Link to="/">
                     <img src="\assets\images\recipe\profile_icon.png"></img>
@@ -36,7 +36,7 @@ export const QandA = ({ qa }) => {
               <button>Reply</button>
             </div>
             <div className="qanda-replies-divider"></div>
-          </>
+          </div>
         ))}
       </div>
     </div>
