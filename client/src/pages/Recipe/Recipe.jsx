@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Recipe.css";
 import { Link, useLocation } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
@@ -108,6 +108,18 @@ export const Recipe = () => {
     },
   ];
   const [rating, setRating] = useState(state.ratingVote);
+
+  const PAGE_SIZE = 3; // or whatever you like
+  const [index, setIndex] = useState(0);
+  const [visibleData, setVisibleData] = useState([]);
+  useEffect(() => {
+    const numberOfItems = PAGE_SIZE * (index + 1);
+    const newArray = [];
+    for (let i = 0; i < qas.length; i++) {
+      if (i < numberOfItems) newArray.push(qas[i]);
+    }
+    setVisibleData(newArray);
+  }, [index]);
 
   const updateReview = async (recipeID, vote) => {
     try {
@@ -261,12 +273,48 @@ export const Recipe = () => {
           <button>Submit</button>
         </div>
         <div className="recipefullqa-qrs">
-          {qas.map((qa, index) => (
+          {visibleData.map((qa, index) => (
             <QandA qa={qa} key={index}></QandA>
           ))}
+          {visibleData.length < qas.length ? (
+            <div
+              className="recipefullqa-loadmore"
+              onClick={() => setIndex(index + 1)}
+            >
+              <span>Load More Questions</span>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M12.0038 18.7296C12.2034 18.7359 12.405 18.6628 12.5573 18.5105L23.7869 7.28085C24.0797 6.98808 24.0797 6.51344 23.7869 6.22071C23.4942 5.92799 23.0196 5.92799 22.7268 6.22071L12.0038 16.9437L1.27963 6.21954C0.986911 5.92682 0.512266 5.92682 0.219543 6.21954C-0.0731809 6.51227 -0.0731809 6.98691 0.219543 7.27963L11.4504 18.5105C11.6027 18.6628 11.8043 18.7359 12.0038 18.7296Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
-      <div style={{ height: 200 }}></div>
+      <div className="recipefull-reviews-container">
+        <h1>REVIEWS</h1>
+        <div></div>
+      </div>
+      <div
+        style={{
+          height: 500,
+          width: "100%",
+          backgroundColor: "red",
+          marginBottom: 500,
+          marginTop: 21900,
+        }}
+      ></div>
     </div>
   );
 };
