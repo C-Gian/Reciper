@@ -1,6 +1,7 @@
 import React from "react";
 import "./RecipeCard.css";
 import { Link } from "react-router-dom";
+import { Rating } from "react-simple-star-rating";
 
 export const RecipeCard = ({ recipe, index }) => {
   const {
@@ -12,6 +13,8 @@ export const RecipeCard = ({ recipe, index }) => {
     description,
     instructions,
     ingredients,
+    ratingVote,
+    totalRatings,
     difficulty,
     price,
     type,
@@ -28,7 +31,7 @@ export const RecipeCard = ({ recipe, index }) => {
       >
         <div className="recipe-t-container">
           <img src={imageUrl} alt={title}></img>
-          <img
+          {/* <img
             src={
               difficulty === "easy"
                 ? "\\assets\\images\\recipecard\\easy.png"
@@ -36,10 +39,16 @@ export const RecipeCard = ({ recipe, index }) => {
                 ? "assets\\images\\recipecard\\medium.png"
                 : "assets\\images\\recipecard\\hard.png"
             }
-          ></img>
+          ></img> */}
+          {/* <div className="recipet-saveicon">
+            <img
+              src="\assets\images\recipes\fav_icon_heart.png"
+              alt="save recipe"
+            ></img>
+          </div> */}
         </div>
         <div className="recipe-b-container">
-          <div className="recipeb-typeprice-container">
+          {/* <div className="recipeb-typeprice-container">
             <div className="recipeb-type">
               <label>{type}</label>
             </div>
@@ -56,38 +65,78 @@ export const RecipeCard = ({ recipe, index }) => {
                 className={price <= 10 ? "recipeb-dollar-disabled" : ""}
               />
             </div>
-          </div>
-          <h1>{title}</h1>
-          <div className="recipeb-tih-container">
-            <div className="recipebtih-time">
-              <div className="recipebtih-time-icontext">
+          </div> */}
+          {/* <div className="recipeb-ti-container">
+            <div className="recipebti-time">
+              <img src="assets\images\recipecard\time_icon.png"></img>
+              <label>{prepTime + cookTime + chillTime}</label>
+              <label>minutes</label>
+            </div>
+            <div className="recipebti-divider"></div>
+            <div className="recipebti-ingredients">
+              <img src="assets\images\recipecard\ingredients_icon.png"></img>
+              <label>{ingredients.length}</label>
+              <label>ingredients</label>
+            </div>
+          </div> */}
+          <div className="recipeb-tti-container">
+            <div className="recipeb-type-container">
+              <label>{type}</label>
+            </div>
+            <div className="recipeb-ti-container">
+              <div className="recipebti-time">
                 <img src="assets\images\recipecard\time_icon.png"></img>
                 <label>{prepTime + cookTime + chillTime}</label>
               </div>
-              <label>Total time</label>
-            </div>
-            <div className="recipebtih-ingredients">
-              <div className="recipebtih-ingredients-icontext">
+              <div className="recipebti-ingredients">
                 <img src="assets\images\recipecard\ingredients_icon.png"></img>
                 <label>{ingredients.length}</label>
               </div>
-              <label>Ingredients</label>
-            </div>
-            <div className="recipebtih-healthy">
-              <div className="recipebtih-healthy-icontext">
-                <img src="assets\images\recipecard\healthy_icon.png"></img>
-                <label>{healthy}</label>
-              </div>
-              <label>Healthy</label>
             </div>
           </div>
-          <button
-          /* onClick={() => saveRecipe(recipe._id)}
-          disabled={isRecipeSaved(recipe._id)} */
+          <h1>{title}</h1>
+          <div className="recipeb-rating">
+            <Rating
+              size={20}
+              initialValue={ratingVote}
+              allowFraction={true}
+              readonly={true}
+            />
+            <label>{Math.floor(ratingVote * 10) / 10}</label>
+            <label>{`(${totalRatings})`}</label>
+          </div>
+          <div className="recipeb-infos">
+            <div className="recipebinfo">
+              <img src="assets\images\recipes\price_icon.png" alt="price"></img>
+              <h1>Price</h1>
+              <label>
+                {price <= 5 ? "low" : price <= 10 ? "medium" : "high"}
+              </label>
+            </div>
+            <div className="recipebinfo">
+              <img
+                src="assets\images\recipes\difficulty_icon.png"
+                alt="price"
+              ></img>
+              <h1>Difficulty</h1>
+              <label>{difficulty}</label>
+            </div>
+            <div className="recipebinfo">
+              <img
+                src="assets\images\recipes\healthy_icon.png"
+                alt="price"
+              ></img>
+              <h1>Healthy</h1>
+              <label>{healthy ? "yes" : "no"}</label>
+            </div>
+          </div>
+          {/* <button
+          onClick={() => saveRecipe(recipe._id)}
+          disabled={isRecipeSaved(recipe._id)}
           >
-            {/* {isRecipeSaved(recipe._id) ? "Saved" : "Save"} */}
+            {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
             Save
-          </button>
+          </button> */}
         </div>
       </Link>
     </div>
