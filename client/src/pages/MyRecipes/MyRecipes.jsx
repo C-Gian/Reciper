@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MyRecipes.css";
-import { Utilitybar } from "../../components";
 import axios from "axios";
-import { RecipeCard } from "../../components/RecipeCard/RecipeCard";
+import { Utilitybar, RecipeCard } from "../../components/index";
 
 export const MyRecipes = () => {
   const [recipes, setRecipes] = useState([]);

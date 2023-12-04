@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Recipe.css";
 import { Link, useLocation } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
-import { QandA, Review } from "../../components/index";
+import { QandA, Review, RecipeCard } from "../../components/index";
 import axios from "axios";
 
 export const Recipe = () => {
@@ -140,7 +140,7 @@ export const Recipe = () => {
     },
   ];
   const [rating, setRating] = useState(state.ratingVote);
-
+  const [relatedRecipes, setRelatedRecipes] = useState([]);
   const PAGE_SIZE = 3; // or whatever you like
   const [qasIndex, setQasIndexndex] = useState(0);
   const [reviewsIndex, setReviewsIndex] = useState(0);
@@ -160,6 +160,19 @@ export const Recipe = () => {
     setQasVisibleData(newArray1);
     setReviewsVisibleData(newArray2);
   }, [qasIndex, reviewsIndex]);
+
+  useEffect(() => {
+    const fectRecipes = async () => {
+      try {
+        const response = await axios.get("http://localhost:3001/recipes");
+        setRelatedRecipes(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fectRecipes();
+  }, []);
 
   const updateReview = async (recipeID, vote) => {
     try {
@@ -405,7 +418,14 @@ export const Recipe = () => {
           )}
         </div>
       </div>
-      <div>You'll also love</div>
+      <div className="recipefull-related-container">
+        <h1>YOU'LL ALSO LOVE</h1>
+        <div className="recipefull-relateds">
+          {relatedRecipes.slice(0, 5).map((relRecipe, index) => (
+            <RecipeCard recipe={relRecipe} index={index}></RecipeCard>
+          ))}
+        </div>
+      </div>
       <div>footer</div>
       <div
         style={{

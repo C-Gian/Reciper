@@ -2,7 +2,7 @@ import React from "react";
 import "./RecipeCard.css";
 import { Link } from "react-router-dom";
 
-export const RecipeCard = ({ recipe }) => {
+export const RecipeCard = ({ recipe, index }) => {
   const {
     imageUrl,
     title,
@@ -24,6 +24,7 @@ export const RecipeCard = ({ recipe }) => {
       }}
       state={recipe}
       className="recipe-container"
+      key={index}
     >
       <div className="recipe-t-container">
         <img src={imageUrl} alt={title}></img>

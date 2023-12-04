@@ -1,12 +1,10 @@
 @import "../../vars.css";
 
 .recipe-container {
-  width: 400px;
-  height: fit-content;
+  width: "50%";
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  margin: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* xOffset yOffset blurRadius color */
   transition: transform 0.1s ease-in-out;
   cursor: pointer;

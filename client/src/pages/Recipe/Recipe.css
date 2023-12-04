@@ -308,6 +308,7 @@ body {
   flex-direction: column;
   width: 100%;
   height: fit-content;
+  margin-bottom: 100px;
 }
 
 .recipefull-reviews-add {
@@ -350,4 +351,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.recipefull-related-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.recipefull-related-container > h1 {
+  font-size: 26px;
+  line-height: 32px;
+  --current-line-height: 32px;
+  font-family: var(--font-header);
+}
+
+.recipefull-relateds {
+  display: flex;
+  justify-content: space-between;
 }
