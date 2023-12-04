@@ -23,9 +23,13 @@ export const MyRecipes = () => {
 
   const randomRecipes = (recipes, number) => {
     const randomRecipes = [];
-    for (let i = 0; i < number; i++) {
+    const indices = [];
+    while (indices.length < number) {
       const casualNumber = Math.floor(Math.random() * recipes.length);
-      randomRecipes.push(recipes[randomRecipes]);
+      if (!indices.includes(casualNumber)) {
+        indices.push(casualNumber);
+        randomRecipes.push(recipes[casualNumber]);
+      }
     }
     return randomRecipes;
   };
@@ -34,9 +38,9 @@ export const MyRecipes = () => {
     <div className="myrecipes-container">
       <Utilitybar></Utilitybar>
       <div className="myrecipes-highlight-container">
-        {/* {highlightRecipes.map((hRecipe, hIndex) => {
-          
-        })} */}
+        {highlightRecipes.map((hRecipe) => (
+          <RecipeCard recipe={hRecipe} key={hRecipe._id}></RecipeCard>
+        ))}
       </div>
       <div className="myrecipes-recipes">
         {recipes.map((recipe) => (
