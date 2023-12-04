@@ -8,3 +8,10 @@
   padding: 50px;
   align-items: center;
 }
+
+.utilitybar-container > h1 {
+  font-size: 2.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-family: var(--font-header);
+}
