@@ -8,13 +8,25 @@
   padding-left: max(2rem, calc(50% - 38.125rem));
 }
 
-.myrecipes-highlight-container {
+.myrecipesh-highlight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.myrecipesh-highlight > h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-family: var(--font-header);
+}
+
+.myrecipes-recipes {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: fit-content;
-  gap: 50px;
   margin-top: 50px;
   margin-bottom: 100px;
 }

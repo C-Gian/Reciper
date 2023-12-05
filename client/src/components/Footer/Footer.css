@@ -1,0 +1,33 @@
+@import "../../vars.css";
+
+.footer-container {
+  height: 600px;
+  width: 100%;
+  background-color: blueviolet;
+  /* background-color: (247, 246, 248); */
+}
+
+.footer-l {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-r {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links > img {
+  width: 40px;
+  height: auto;
+  object-fit: cover;
+}

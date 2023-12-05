@@ -8,6 +8,11 @@
   src: url("/assets/fonts/brandon/brandon-header.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "brandon-bold";
+  src: url("/assets/fonts/brandon/brandon-bold.otf") format("opentype");
+}
+
 :root {
   /*colors*/
   --color-text: #fff;
@@ -21,4 +26,5 @@
   /* fonts */
   --font-header: "brandon-header";
   --font-base: "GothamBook";
+  --font-bold: "brandon-bold";
 }

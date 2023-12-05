@@ -3,7 +3,7 @@ import "./RecipeCard.css";
 import { Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
 
-export const RecipeCard = ({ recipe, index }) => {
+export const RecipeCard = ({ recipe, index, size }) => {
   const {
     imageUrl,
     title,
@@ -21,7 +21,7 @@ export const RecipeCard = ({ recipe, index }) => {
     healthy,
   } = recipe;
   return (
-    <div className="recipe-container">
+    <div className="recipe-container" style={{ width: size.w }}>
       <Link
         to={{
           pathname: "/recipe",
@@ -29,7 +29,7 @@ export const RecipeCard = ({ recipe, index }) => {
         state={recipe}
         key={index}
       >
-        <div className="recipe-t-container">
+        <div className="recipe-t-container" style={{ height: size.h }}>
           <img src={imageUrl} alt={title}></img>
           {/* <img
             src={
@@ -105,7 +105,7 @@ export const RecipeCard = ({ recipe, index }) => {
             <label>{Math.floor(ratingVote * 10) / 10}</label>
             <label>{`(${totalRatings})`}</label>
           </div>
-          <div className="recipeb-infos">
+          {/* <div className="recipeb-infos">
             <div className="recipebinfo">
               <img src="assets\images\recipes\price_icon.png" alt="price"></img>
               <h1>Price</h1>
@@ -129,7 +129,7 @@ export const RecipeCard = ({ recipe, index }) => {
               <h1>Healthy</h1>
               <label>{healthy ? "yes" : "no"}</label>
             </div>
-          </div>
+          </div> */}
           {/* <button
           onClick={() => saveRecipe(recipe._id)}
           disabled={isRecipeSaved(recipe._id)}

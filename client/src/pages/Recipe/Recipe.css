@@ -12,6 +12,12 @@ body {
   color: #2f2f2f;
 }
 
+.recipefull {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .recipefull-container {
   width: 800px;
   display: flex;
@@ -86,19 +92,34 @@ body {
   font-weight: bold;
 }
 
+.recipefull-save {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: var(--font-bold);
+  padding: 10px;
+  color: #b71c1c;
+  background-color: white;
+  border: 1px solid rgb(233, 229, 238);
+  border-radius: 5px;
+}
+
+.recipefull-save > img {
+  height: auto;
+  width: 25px;
+}
+
 .recipefull-description {
   margin-bottom: 20px;
   margin: 1rem 0;
   font-weight: 400;
   line-height: 1.75rem;
-}
-
-.recipefull-images {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  align-items: center;
-  margin-bottom: 50px;
 }
 
 .recipefull-img-main {
@@ -107,6 +128,8 @@ body {
   margin-bottom: 10px;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .recipefull-img-sec-container {
@@ -145,8 +168,9 @@ body {
 
 .recipefull-insing-container {
   display: flex;
-  height: 600px;
+  height: fit-content;
   margin-bottom: 50px;
+  gap: 50px;
 }
 
 .recipefull-instructions {

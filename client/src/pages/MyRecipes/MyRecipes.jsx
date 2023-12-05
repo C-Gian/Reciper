@@ -36,15 +36,26 @@ export const MyRecipes = () => {
 
   return (
     <div className="myrecipes-container">
-      <Utilitybar></Utilitybar>
-      <div className="myrecipes-highlight-container">
-        {highlightRecipes.map((hRecipe) => (
-          <RecipeCard recipe={hRecipe} key={hRecipe._id}></RecipeCard>
-        ))}
+      <div className="myrecipesh-highlight">
+        <h1>POPULAR TODAY</h1>
+        <div className="myrecipes-recipes">
+          {highlightRecipes.map((hRecipe) => (
+            <RecipeCard
+              recipe={hRecipe}
+              key={hRecipe._id}
+              size={{ w: 400, h: 245 }}
+            ></RecipeCard>
+          ))}
+        </div>
       </div>
+      <Utilitybar></Utilitybar>
       <div className="myrecipes-recipes">
         {recipes.map((recipe) => (
-          <RecipeCard recipe={recipe} key={recipe._id}></RecipeCard>
+          <RecipeCard
+            recipe={recipe}
+            key={recipe._id}
+            size={{ w: 300, h: 185 }}
+          ></RecipeCard>
         ))}
       </div>
     </div>

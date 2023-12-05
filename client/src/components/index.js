@@ -4,5 +4,6 @@ import { Utilitybar } from "./Utilitybar/Utilitybar";
 import { QandA } from "./QandA/QandA";
 import { Review } from "./Review/Review";
 import { RecipeCard } from "./RecipeCard/RecipeCard";
+import { Footer } from "./Footer/Footer";
 
-export { Navbar, Topbar, Utilitybar, QandA, Review, RecipeCard };
+export { Navbar, Topbar, Utilitybar, QandA, Review, RecipeCard, Footer };

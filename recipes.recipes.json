@@ -1,0 +1,445 @@
+[
+  {
+    "_id": {
+      "$oid": "656b0b566d364ba1dd0fdce9"
+    },
+    "title": "Dish 1",
+    "imageUrl": "https://www.giallozafferano.it/images/7-748/Strauben-frittelle-tirolesi_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": ["ingredient 1", "ingredient 2", "ingredient 3", ""],
+    "instructions": [
+      "instruction 1",
+      "instruction 2",
+      "instruction 3",
+      "instruction 4"
+    ],
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "prepTime": 35,
+    "cookTime": 20,
+    "chillTime": 9,
+    "difficulty": "medium",
+    "type": "appetizer",
+    "date": "02/12/2023",
+    "price": 10,
+    "totalRatings": 0,
+    "ratingVote": 0,
+    "healthy": "healthy",
+    "userOwner": {
+      "$oid": "6564a4fd9ddf9a6bc2defa7c"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0b8e6d364ba1dd0fdceb"
+    },
+    "title": "Dish 2",
+    "imageUrl": "https://www.giallozafferano.it/images/212-21250/Strozzapreti-cacio-cozze-e-pepe_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": ["ingredient 1", "ingredient 2", "ingredient 3", ""],
+    "instructions": [
+      "instruction 1",
+      "instruction 2",
+      "instruction 3",
+      "instruction 4"
+    ],
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "prepTime": 55,
+    "cookTime": 35,
+    "chillTime": 11,
+    "difficulty": "hard",
+    "type": "main course",
+    "date": "02/12/2023",
+    "price": 5,
+    "totalRatings": 0,
+    "ratingVote": 0,
+    "healthy": "neutral",
+    "userOwner": {
+      "$oid": "6564a4fd9ddf9a6bc2defa7c"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdced"
+    },
+    "title": "Dish 3",
+    "imageUrl": "https://www.giallozafferano.it/images/225-22581/Tronchetto-di-Natale-innevato_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": [
+      "339.55 ml butter or 339.55 ml margarine, softened",
+      "543.28 ml sugar",
+      "2 large eggs",
+      "11.31 ml vanilla extract",
+      "543.28 ml all-purpose flour",
+      "203.73 ml cocoa",
+      "5.65 ml baking soda",
+      "2.82 ml salt",
+      "543.28 ml peanut butter chips (12 oz. pkg.) or 543.28 ml semi-sweet chocolate chips (12 oz. pkg.)"
+    ],
+    "instructions": [
+      "Heat oven to 350°.",
+      "In large mixer bowl; cream butter and sugar until light and fluffy.",
+      "Add eggs and vanilla; beat well.",
+      "Combine flour, cocoa, baking soda and salt; gradually blend into creamed mixture. Stir in peanut butter or chocolate chips.",
+      "Drop by teaspoonfuls onto ungreased cookie sheet. Bake 8-9 minutes. (Do not overbake; cookies will be soft. They will puff while baking and flatten while cooling.).",
+      "Cool slightly; remove from cookie sheet onto wire rack. Cool completely."
+    ],
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "prepTime": 77,
+    "cookTime": 66,
+    "chillTime": 33,
+    "difficulty": "easy",
+    "type": "dessert",
+    "date": "02/12/2023",
+    "price": 15,
+    "totalRatings": 2,
+    "ratingVote": 2.5,
+    "healthy": "not healthy",
+    "userOwner": {
+      "$oid": "6564a4fd9ddf9a6bc2defa7c"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656df124fceef6df42209e78"
+    },
+    "title": "Classic Lasagna",
+    "imageUrl": "https://www.giallozafferano.it/images/259-25935/Cupcake-di-Natale_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": [
+      "500g minced beef",
+      "200g lasagna pasta",
+      "400g tomato sauce",
+      "250g ricotta",
+      "150g grated cheese",
+      "1 onion",
+      "2 cloves of garlic",
+      "1 teaspoon oregano",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C.",
+      "In a pan, sauté the onion and garlic.",
+      "Add the minced beef and cook until browned.",
+      "Add the tomato sauce, oregano, salt, and pepper.",
+      "In a baking dish, layer lasagna, meat, ricotta, and cheese.",
+      "Repeat until all ingredients are used, ensuring the top layer is cheese.",
+      "Cover with foil and bake in the oven for 30 minutes.",
+      "Remove the foil and bake for an additional 15 minutes or until golden brown.",
+      "Let it rest for 10 minutes before serving."
+    ],
+    "description": "A delicious homemade classic lasagna that will satisfy every palate.",
+    "prepTime": 45,
+    "cookTime": 45,
+    "chillTime": 15,
+    "difficulty": "medium",
+    "type": "main course",
+    "date": "02/12/2023",
+    "price": 18,
+    "totalRatings": 5,
+    "ratingVote": 4.8,
+    "healthy": "neutral",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdcee"
+    },
+    "title": "Chicken Curry",
+    "imageUrl": "https://www.giallozafferano.it/images/239-23933/Tagliatelle-ripiene_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": [
+      "500g diced chicken breast",
+      "200ml coconut milk",
+      "2 tablespoons curry paste",
+      "1 onion",
+      "3 cloves of garlic",
+      "1 red bell pepper",
+      "1 zucchini",
+      "1 tablespoon olive oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "In a pan, sauté the onion and garlic with olive oil.",
+      "Add the chicken and cook until browned.",
+      "Add the curry paste, mix well.",
+      "Add coconut milk, diced red pepper, and zucchini.",
+      "Simmer for 20 minutes or until fully cooked.",
+      "Adjust salt and pepper to taste.",
+      "Serve with basmati rice."
+    ],
+    "description": "A chicken curry dish rich in exotic flavors, perfect for a special dinner.",
+    "prepTime": 30,
+    "cookTime": 25,
+    "chillTime": 0,
+    "difficulty": "medium",
+    "type": "main course",
+    "date": "03/12/2023",
+    "price": 22,
+    "totalRatings": 10,
+    "ratingVote": 4.5,
+    "healthy": "healthy",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdcef"
+    },
+    "title": "Spaghetti Aglio e Olio",
+    "imageUrl": "https://www.giallozafferano.it/images/202-20201/Gingerbread-salati-e-spritz-delle-feste_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": [
+      "400g spaghetti",
+      "4 cloves of sliced garlic",
+      "Red chili pepper, finely chopped, to taste",
+      "Extra virgin olive oil",
+      "Chopped fresh parsley",
+      "Salt, to taste"
+    ],
+    "instructions": [
+      "Cook the spaghetti in salted water according to the package instructions.",
+      "In a pan, heat the olive oil and add the sliced garlic and chili pepper.",
+      "Cook over medium heat until the garlic is golden brown.",
+      "Drain the spaghetti and add them to the pan with the aromatic oil.",
+      "Mix well and add chopped fresh parsley.",
+      "Serve hot, adding salt if necessary."
+    ],
+    "description": "A classic and delicious version of spaghetti aglio e olio, a simple yet flavorful Italian dish.",
+    "prepTime": 15,
+    "cookTime": 10,
+    "chillTime": 0,
+    "difficulty": "easy",
+    "type": "first course",
+    "date": "04/12/2023",
+    "price": 12,
+    "totalRatings": 8,
+    "ratingVote": 4.7,
+    "healthy": "neutral",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdcf0"
+    },
+    "title": "Quinoa and Vegetable Salad",
+    "imageUrl": "https://www.giallozafferano.it/images/173-17381/Capesante-gratinate_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": [
+      "1 cup quinoa",
+      "2 cups water",
+      "1 cucumber, diced",
+      "200g cherry tomatoes, halved",
+      "1 avocado, sliced",
+      "50g crumbled feta cheese",
+      "2 tablespoons olive oil",
+      "1 lemon (juice)",
+      "Salt and pepper, to taste"
+    ],
+    "instructions": [
+      "Rinse the quinoa under running water.",
+      "Cook the quinoa in salted water according to the package instructions.",
+      "In a large bowl, mix the cooked quinoa with cucumber, tomatoes, avocado, and feta.",
+      "Season with olive oil, lemon juice, salt, and pepper.",
+      "Gently mix and serve chilled."
+    ],
+    "description": "A light and nutritious salad with quinoa, fresh vegetables, and feta cheese.",
+    "prepTime": 20,
+    "cookTime": 15,
+    "chillTime": 30,
+    "difficulty": "easy",
+    "type": "salad",
+    "date": "05/12/2023",
+    "price": 10,
+    "totalRatings": 4,
+    "ratingVote": 4.2,
+    "healthy": "healthy",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdcf1"
+    },
+    "title": "Porcini Mushroom Risotto",
+    "imageUrl": "https://www.giallozafferano.it/images/215-21538/Vol-au-vent-ripieni_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": [
+      "300g Arborio rice",
+      "200g fresh porcini mushrooms",
+      "1 chopped onion",
+      "2 cloves of chopped garlic",
+      "1/2 cup dry white wine",
+      "1 liter vegetable broth",
+      "50g grated Parmesan cheese",
+      "2 tablespoons butter",
+      "Chopped fresh parsley",
+      "Salt and pepper, to taste"
+    ],
+    "instructions": [
+      "In a pan, sauté the onion and garlic with 1 tablespoon of butter.",
+      "Add the porcini mushrooms and cook until golden brown.",
+      "Add the rice and toast for a couple of minutes.",
+      "Pour in the white wine and let it evaporate.",
+      "Gradually add the hot broth, stirring continuously.",
+      "Cook until the rice is al dente and creamy.",
+      "Add Parmesan, remaining butter, parsley, salt, and pepper.",
+      "Mix well and serve hot."
+    ],
+    "description": "A rich and fragrant risotto made with fresh porcini mushrooms.",
+    "prepTime": 30,
+    "cookTime": 25,
+    "chillTime": 0,
+    "difficulty": "medium",
+    "type": "first course",
+    "date": "06/12/2023",
+    "price": 20,
+    "totalRatings": 6,
+    "ratingVote": 4.6,
+    "healthy": "neutral",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdcf2"
+    },
+    "title": "Grilled Steak",
+    "imageUrl": "https://www.giallozafferano.it/images/182-18287/Brasato-al-Barolo_780x520_wm.jpg?cb=7105c2160d77265f217866dbb2ce57b053899e24",
+    "ingredients": [
+      "2 beef steaks",
+      "2 tablespoons olive oil",
+      "2 cloves of crushed garlic",
+      "Fresh rosemary sprigs",
+      "Salt and pepper, to taste"
+    ],
+    "instructions": [
+      "Preheat the grill to medium-high heat.",
+      "Brush the steaks with olive oil and rub with crushed garlic.",
+      "Season with salt and pepper, and add rosemary sprigs.",
+      "Grill the steaks for 4-5 minutes per side for medium doneness.",
+      "Let them rest for a few minutes before serving."
+    ],
+    "description": "A succulent grilled steak with flavors of rosemary and garlic.",
+    "prepTime": 10,
+    "cookTime": 10,
+    "chillTime": 0,
+    "difficulty": "easy",
+    "type": "main course",
+    "date": "07/12/2023",
+    "price": 25,
+    "totalRatings": 12,
+    "ratingVote": 4.9,
+    "healthy": "not healthy",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdcf3"
+    },
+    "title": "Tiramisu",
+    "imageUrl": "https://www.giallozafferano.it/images/ricette/229/22971/foto_hd/hd360x300.jpg",
+    "ingredients": [
+      "4 eggs",
+      "150g sugar",
+      "500g mascarpone",
+      "200ml cooled coffee",
+      "Cocoa powder for decoration",
+      "Ladyfingers, as needed"
+    ],
+    "instructions": [
+      "Separate the egg yolks from the whites and beat the yolks with sugar.",
+      "Add the mascarpone and mix until smooth.",
+      "Whip the egg whites until stiff and gently fold them into the mascarpone cream.",
+      "Quickly dip the ladyfingers in coffee and arrange them in a dish.",
+      "Pour half of the cream over the ladyfingers.",
+      "Repeat the process to create a second layer.",
+      "Cover and refrigerate for at least 4 hours or overnight.",
+      "Before serving, dust with cocoa powder."
+    ],
+    "description": "The classic Italian tiramisu, a creamy and irresistible dessert.",
+    "prepTime": 30,
+    "cookTime": 0,
+    "chillTime": 240,
+    "difficulty": "medium",
+    "type": "dessert",
+    "date": "08/12/2023",
+    "price": 15,
+    "totalRatings": 15,
+    "ratingVote": 4.7,
+    "healthy": "not healthy",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdcf4"
+    },
+    "title": "Tomato Soup",
+    "imageUrl": "https://www.giallozafferano.it/images/ricette/173/17390/foto_hd/hd360x300.jpg",
+    "ingredients": [
+      "1 kg ripe tomatoes",
+      "1 chopped onion",
+      "2 cloves of crushed garlic",
+      "1 carrot, diced",
+      "1 celery stalk, diced",
+      "1 liter vegetable broth",
+      "2 tablespoons olive oil",
+      "Fresh basil",
+      "Salt and pepper, to taste"
+    ],
+    "instructions": [
+      "Blanch the tomatoes in boiling water, then peel and chop them.",
+      "In a pot, sauté the onion, garlic, carrot, and celery with olive oil.",
+      "Add the chopped tomatoes and cook for 10 minutes.",
+      "Pour in the vegetable broth and simmer for 30 minutes.",
+      "Use an immersion blender to reduce the soup to a creamy consistency.",
+      "Adjust salt and pepper and serve with fresh basil leaves."
+    ],
+    "description": "A warm and comforting soup made with fresh tomatoes and Mediterranean flavors.",
+    "prepTime": 20,
+    "cookTime": 40,
+    "chillTime": 0,
+    "difficulty": "easy",
+    "type": "soup",
+    "date": "09/12/2023",
+    "price": 8,
+    "totalRatings": 7,
+    "ratingVote": 4.4,
+    "healthy": "healthy",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "656b0bbe6d364ba1dd0fdcf5"
+    },
+    "title": "Caprese Sandwich",
+    "imageUrl": "https://www.giallozafferano.it/images/ricette/241/24118/foto_hd/hd360x300.jpg",
+    "ingredients": [
+      "4 rolls",
+      "4 slices of mozzarella",
+      "4 slices of tomato",
+      "Fresh basil leaves",
+      "Olive oil",
+      "Salt and pepper, to taste"
+    ],
+    "instructions": [
+      "Cut the rolls in half and lightly toast them.",
+      "Assemble the sandwiches with slices of mozzarella and tomato.",
+      "Add fresh basil leaves.",
+      "Drizzle with olive oil, and season with salt and pepper.",
+      "Serve as a quick snack or light lunch."
+    ],
+    "description": "A fresh and tasty sandwich inspired by the classic Caprese salad.",
+    "prepTime": 10,
+    "cookTime": 5,
+    "chillTime": 0,
+    "difficulty": "easy",
+    "type": "snack",
+    "date": "10/12/2023",
+    "price": 6,
+    "totalRatings": 3,
+    "ratingVote": 4.1,
+    "healthy": "healthy",
+    "userOwner": "6564a4fd9ddf9a6bc2defa7c",
+    "__v": 0
+  }
+]
