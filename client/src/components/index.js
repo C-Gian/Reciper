@@ -1,9 +1,8 @@
-import { Navbar } from "./Navbar/Navbar";
-import { Topbar } from "./Topbar/Topbar";
-import { Utilitybar } from "./Utilitybar/Utilitybar";
+import { Header } from "./Header/Header";
 import { QandA } from "./QandA/QandA";
 import { Review } from "./Review/Review";
 import { RecipeCard } from "./RecipeCard/RecipeCard";
 import { Footer } from "./Footer/Footer";
+import { Searchbar } from "./Searchbar/Searchbar";
 
-export { Navbar, Topbar, Utilitybar, QandA, Review, RecipeCard, Footer };
+export { Header, QandA, Review, RecipeCard, Footer, Searchbar };

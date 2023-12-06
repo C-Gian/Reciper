@@ -1,0 +1,94 @@
+@import "../../vars.css";
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  gap: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.header-t {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 10px 30px 0px 30px;
+}
+
+.headert-l {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.headert-l > img {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.headert-l > h1 {
+  font-family: var(--font-ballada);
+  font-size: 40px;
+  color: rgb(18, 18, 18);
+}
+
+.headert-c {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.headert-r {
+  display: flex;
+  align-items: center;
+}
+
+.headert-notuser-container {
+  display: flex;
+  width: fit-content;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: #000000 solid 1px;
+  padding: 10px;
+}
+
+.headert-notuser-container > label {
+  font-size: 1.5vw;
+  text-decoration: none !important;
+  color: black;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.headert-user-container {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.headert-rrl-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.headert-rrl-button > img {
+  width: 50px;
+  height: auto;
+}

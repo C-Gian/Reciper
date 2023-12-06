@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MyRecipes.css";
 import axios from "axios";
-import { Utilitybar, RecipeCard } from "../../components/index";
+import { RecipeCard } from "../../components/index";
 
 export const MyRecipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -48,15 +48,17 @@ export const MyRecipes = () => {
           ))}
         </div>
       </div>
-      <Utilitybar></Utilitybar>
-      <div className="myrecipes-recipes">
-        {recipes.map((recipe) => (
-          <RecipeCard
-            recipe={recipe}
-            key={recipe._id}
-            size={{ w: 300, h: 185 }}
-          ></RecipeCard>
-        ))}
+      <div className="myrecipes-others-container">
+        <h1>EXPLORE OTHERS RECIPES</h1>
+        <div className="myrecipes-recipes myrecipes-others">
+          {recipes.map((recipe) => (
+            <RecipeCard
+              recipe={recipe}
+              key={recipe._id}
+              size={{ w: 300, h: 185 }}
+            ></RecipeCard>
+          ))}
+        </div>
       </div>
     </div>
   );

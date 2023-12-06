@@ -34,24 +34,43 @@
 }
 
 .recipet-saveicon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 0;
   right: 0;
-  margin: 10px;
-  padding: 10px;
-  background-color: rgb(255, 111, 0);
+  margin: 5px;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.recipet-saveicon > img {
+.recipet-saveicon > svg {
   width: 80%;
   height: auto;
-  filter: brightness(100);
+}
+
+.recipet-heart-icon {
+  transition: color 0.3s;
+}
+
+.recipet-heart-outline {
+  stroke: #e1e1e1; /* Colore del contorno iniziale */
+  transition: stroke 0.3s;
+}
+
+.recipet-heart-fill {
+  opacity: 0; /* Inizialmente nascosto */
+  transition: opacity 0.3s;
+}
+
+.recipet-heart-icon:hover .recipet-heart-outline {
+  stroke: red; /* Cambia il colore del contorno a rosso durante l'hover */
+}
+
+.recipet-heart-icon:hover .recipet-heart-fill {
+  opacity: 1; /* Mostra il riempimento rosso durante l'hover */
 }
 
 .recipe-b-container {
