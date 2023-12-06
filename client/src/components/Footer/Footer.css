@@ -1,10 +1,13 @@
 @import "../../vars.css";
 
 .footer-container {
-  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
   width: 100%;
-  background-color: blueviolet;
-  /* background-color: (247, 246, 248); */
+  background-color: rgb(0, 0, 0);
+  padding: 30px 100px 30px 100px;
 }
 
 .footer-l {
@@ -13,11 +16,29 @@
   align-items: center;
 }
 
+.footer-l > img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.footer-l > h1 {
+  font-family: var(--font-ballada);
+  font-size: 60px;
+  color: white;
+}
+
 .footer-r {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
+}
+
+.footer-r > h1 {
+  color: white;
 }
 
 .footer-links {
@@ -26,8 +47,17 @@
   gap: 20px;
 }
 
-.footer-links > img {
+.footer-link {
   width: 40px;
   height: auto;
+}
+
+.footer-link > img {
   object-fit: cover;
+  width: 40px;
+  height: auto;
+}
+
+.footer-links > a:first-child > img {
+  filter: invert(100);
 }

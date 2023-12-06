@@ -13,6 +13,11 @@
   src: url("/assets/fonts/brandon/brandon-bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "ballada";
+  src: url("/assets/fonts/ballada.ttf") format("truetype");
+}
+
 :root {
   /*colors*/
   --color-text: #fff;
@@ -27,4 +32,5 @@
   --font-header: "brandon-header";
   --font-base: "GothamBook";
   --font-bold: "brandon-bold";
+  --font-ballada: "ballada";
 }

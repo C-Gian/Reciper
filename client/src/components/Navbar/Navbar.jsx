@@ -18,7 +18,6 @@ export const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <div className="navbar-space"></div>
       <div className="navbar-links">
         <Link
           to="/"
