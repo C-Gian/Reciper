@@ -1,0 +1,29 @@
+@import "../../vars.css";
+
+.searchrecipes-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  margin-top: 50px;
+  padding-right: max(2rem, calc(50% - 38.125rem));
+  padding-left: max(2rem, calc(50% - 38.125rem));
+}
+
+.searchrecipes-container > h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-family: var(--font-header);
+}
+
+.searchrecipes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  margin-top: 50px;
+  gap: 15px;
+  flex-wrap: wrap;
+}

@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import "./Header.css";
-import { Searchbar } from "../index.js";
 import { Navbar } from "./Navbar/Navbar";
 
 export const Header = () => {
@@ -10,11 +9,16 @@ export const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
+  const [searchQuery, setSearchQuery] = useState("");
 
   const logout = () => {
     setCookies("access_token", "");
     window.localStorage.removeItem("userID");
     navigate("/auth");
+  };
+
+  const searchItems = (e) => {
+    setSearchQuery(e);
   };
 
   return (
@@ -25,7 +29,24 @@ export const Header = () => {
           <h1>Reciper</h1>
         </div>
         <div className="headert-c">
-          <Searchbar></Searchbar>
+          <form action="" className="headert-c-form">
+            <input
+              type="search"
+              placeholder="Search Recipes"
+              onChange={(e) => searchItems(e.target.value)}
+            />
+            <Link
+              to={{
+                pathname: "/search-recipes",
+              }}
+              state={searchQuery}
+              className="headert-c-link"
+            >
+              <button type="submit">
+                <img src="\assets\images\header\search_icon.png" alt="search" />
+              </button>
+            </Link>
+          </form>
         </div>
         <div className="headert-r">
           {!cookies.access_token ? (
