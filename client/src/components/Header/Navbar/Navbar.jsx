@@ -28,7 +28,7 @@ export const Navbar = () => {
         My Recipes
       </Link>
       <Link
-        to="/"
+        to="/search-recipes"
         className={`navbarc-link ${
           isActive("/search-recipes") ? "active" : ""
         }`}

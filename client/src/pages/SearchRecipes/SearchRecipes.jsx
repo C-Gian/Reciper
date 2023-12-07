@@ -5,25 +5,30 @@ import axios from "axios";
 import { RecipeCard } from "../../components/index";
 
 export const SearchRecipes = () => {
-  let { state } = useLocation();
+  const query = useLocation().state;
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
     const fectRecipes = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recipes");
+        let response;
+        if (query) {
+          response = await axios.get(`http://localhost:3001/recipes/${query}`);
+        } else {
+          response = await axios.get(`http://localhost:3001/recipes`);
+        }
         setRecipes(response.data);
-      } catch (error) {
-        console.log(error);
+      } catch (err) {
+        console.log(err);
       }
     };
 
     fectRecipes();
-  }, []);
+  }, [query]);
 
   return (
     <div className="searchrecipes-container">
-      <h1>Recipes with "{state}"</h1>
+      <h1>{query ? `Recipes with "${query}"` : "All Recipes"}</h1>
       <div className="searchrecipes">
         {recipes.map((recipe) => (
           <RecipeCard

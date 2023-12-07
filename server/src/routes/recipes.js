@@ -15,6 +15,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:query", async (req, res) => {
+  try {
+    const searchTerm = req.params.query;
+    const recipes = await RecipeModel.find({
+      title: { $regex: searchTerm, $options: "i" },
+    });
+    res.json(recipes);
+  } catch (err) {
+    res.json(err);
+  }
+});
+
 router.post("/", verifyToken, async (req, res) => {
   const recipe = new RecipeModel(req.body);
   try {
