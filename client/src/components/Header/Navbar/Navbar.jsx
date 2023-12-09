@@ -13,14 +13,7 @@ export const Navbar = () => {
       <Link to="/" className={`navbarc-link ${isActive("/") ? "active" : ""}`}>
         Home
       </Link>
-      <Link
-        to="/"
-        className={`navbarc-link ${
-          isActive("/random-recipes") ? "active" : ""
-        }`}
-      >
-        Random Recipes
-      </Link>
+
       <Link
         to={!cookies.access_token ? "/auth" : "/my-recipes"}
         className={`navbarc-link ${isActive("/my-recipes") ? "active" : ""}`}

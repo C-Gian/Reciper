@@ -1,12 +1,16 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
-  Home,
   Auth,
+  Profile,
+  Home,
+  Explore,
+  Notifications,
+  Messages,
   MyRecipes,
-  Recipe,
-  CreateRecipe,
   SearchRecipes,
+  CreateRecipe,
+  Recipe,
 } from "./pages";
 import { Header, Footer } from "./components";
 
@@ -17,8 +21,11 @@ function App() {
         <Header></Header>
         <Routes>
           <Route path="/auth" element={<Auth />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/" element={<Home />} />
-          <Route path="/random-recipes" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/messages" element={<Messages />} />
           <Route path="/my-recipes" element={<MyRecipes />} />
           <Route path="/search-recipes" element={<SearchRecipes />} />
           <Route path="/create-recipe" element={<CreateRecipe />} />

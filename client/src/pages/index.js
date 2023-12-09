@@ -1,8 +1,23 @@
-import { Home } from "./Home/Home";
 import { Auth } from "./Auth/Auth";
-import { CreateRecipe } from "./CreateRecipe/CreateRecipe";
+import { Profile } from "./Profile/Profile";
+import { Home } from "./Home/Home";
+import { Explore } from "./Explore/Explore";
+import { Notifications } from "./Notifications/Notifications";
+import { Messages } from "./Messages/Messages";
 import { MyRecipes } from "./MyRecipes/MyRecipes";
-import { Recipe } from "./Recipe/Recipe";
 import { SearchRecipes } from "./SearchRecipes/SearchRecipes";
+import { CreateRecipe } from "./CreateRecipe/CreateRecipe";
+import { Recipe } from "./Recipe/Recipe";
 
-export { Home, Auth, CreateRecipe, MyRecipes, Recipe, SearchRecipes };
+export {
+  Auth,
+  Profile,
+  Home,
+  Explore,
+  Notifications,
+  Messages,
+  MyRecipes,
+  SearchRecipes,
+  CreateRecipe,
+  Recipe,
+};
