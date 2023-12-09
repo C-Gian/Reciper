@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header></Header>
         <Routes>
           <Route path="/auth" element={<Auth />} />
           <Route path="/" element={<Home />} />
@@ -24,7 +23,6 @@ function App() {
           <Route path="/create-recipe" element={<CreateRecipe />} />
           <Route path="/recipe" element={<Recipe />} />
         </Routes>
-        <Footer></Footer>
       </Router>
     </div>
   );
