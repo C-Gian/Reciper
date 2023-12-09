@@ -1,18 +1,14 @@
 @import "../../vars.css";
 
-.lefter {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  height: 500px;
-  background-color: red;
-}
-
-.lefter-inside {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: blueviolet;
+.sidebar {
+  flex-shrink: 0;
+  width: 200px; /* make this whatever you need */
+  height: 100vh;
+  overflow: auto;
+  position: sticky;
+  top: 0;
+  padding: 16px;
+  border: 3px solid seagreen;
 }
 
 .navbarc-link {

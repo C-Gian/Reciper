@@ -9,9 +9,26 @@ export const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="lefter">
-      <div className="lefter-inside"></div>
-    </div>
+    <aside className="sidebar">
+      <h1>Example.com</h1>
+      <ul className="nav">
+        <li>Home</li>
+        <li>About</li>
+        <li>
+          <a href="#getting-started">Getting started</a>
+        </li>
+        <li>
+          <a href="#pricing">Pricing</a>
+        </li>
+        <li>
+          <a href="#my-account">My account</a>
+        </li>
+        <li>Company</li>
+        <li>Jobs</li>
+        <li>Sign up</li>
+        <li>Privacy policy</li>
+      </ul>
+    </aside>
   );
 };
 
