@@ -8,12 +8,13 @@ import {
   CreateRecipe,
   SearchRecipes,
 } from "./pages";
-import { Header, Footer } from "./components";
+import { Navbar, Righter } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar></Navbar>
         <Routes>
           <Route path="/auth" element={<Auth />} />
           <Route path="/" element={<Home />} />
@@ -23,6 +24,7 @@ function App() {
           <Route path="/create-recipe" element={<CreateRecipe />} />
           <Route path="/recipe" element={<Recipe />} />
         </Routes>
+        <Righter></Righter>
       </Router>
     </div>
   );

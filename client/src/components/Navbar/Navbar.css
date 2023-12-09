@@ -1,14 +1,18 @@
-@import "../../../vars.css";
+@import "../../vars.css";
 
-.navbar-links {
+.lefter {
   display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 500px;
+  background-color: red;
+}
+
+.lefter-inside {
+  position: fixed;
+  height: 100%;
   width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  font-size: 1vw;
-  flex: 2;
-  border-bottom: 1px solid #dee0df;
+  background-color: blueviolet;
 }
 
 .navbarc-link {

@@ -13,9 +13,15 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  padding-right: 10vw;
+  padding-left: 10vw;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+}
+
+.App {
+  display: flex;
 }

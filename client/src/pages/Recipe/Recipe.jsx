@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Recipe.css";
 import { Link, useLocation } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
-import { QandA, Review, RecipeCard, Footer } from "../../components/index";
+import { QandA, Review, RecipeCard } from "../../components/index";
 import axios from "axios";
 
 export const Recipe = () => {

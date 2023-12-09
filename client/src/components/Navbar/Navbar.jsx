@@ -9,7 +9,14 @@ export const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="navbar-links">
+    <div className="lefter">
+      <div className="lefter-inside"></div>
+    </div>
+  );
+};
+
+{
+  /* <div className="navbar-links">
       <Link to="/" className={`navbarc-link ${isActive("/") ? "active" : ""}`}>
         Home
       </Link>
@@ -41,6 +48,5 @@ export const Navbar = () => {
       >
         Create Recipe
       </Link>
-    </div>
-  );
-};
+    </div> */
+}

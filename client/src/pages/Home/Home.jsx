@@ -34,8 +34,9 @@ export const Home = () => {
     return randomRecipes;
   };
 
-  return (
-    <div className="home-container">
+  return <div className="central"></div>;
+};
+/* <div className="home-container">
       <div className="homeh-highlight">
         <h1>POPULAR TODAY</h1>
         <div className="home-recipes">
@@ -60,6 +61,4 @@ export const Home = () => {
           ))}
         </div>
       </div>
-    </div>
-  );
-};
+    </div> */

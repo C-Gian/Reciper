@@ -1,9 +1,12 @@
 import React from "react";
-import "./Footer.css";
+import "./Righter.css";
 
-export const Footer = () => {
-  return (
-    <footer className="footer-container">
+export const Righter = () => {
+  return <div className="righter"></div>;
+};
+
+{
+  /* <footer className="footer-container">
       <div className="footer-l">
         <img src="\assets\images\footer\logo_1.png" alt=""></img>
         <h1>Reciper</h1>
@@ -34,6 +37,5 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-    </footer>
-  );
-};
+    </footer> */
+}
