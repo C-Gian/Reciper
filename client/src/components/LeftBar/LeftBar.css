@@ -1,0 +1,102 @@
+@import "../../vars.css";
+
+.leftbar-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+  overflow: auto;
+  position: sticky;
+  top: 0;
+}
+
+.lb-container {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: var(--pad-small);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lb-header {
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: var(--marg-medium);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: var(--pad-small) var(--pad-small) var(--pad-small) var(--pad-small);
+}
+
+.lb-header > img {
+  height: 100%;
+  width: auto;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.lb-header > h1 {
+  font-size: 2.2vw;
+  font-family: var(--font-ballada);
+  color: rgb(255, 255, 255);
+}
+
+.lb-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: var(--marg-big);
+}
+
+.lb-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: relative;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  font-family: var(--font-bold);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: var(--pad-small) var(--pad-small) var(--pad-small) var(--pad-small);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.lb-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.lb-icon {
+  width: 30px;
+  height: auto;
+}
+
+.lb-logout {
+  cursor: pointer;
+}
+
+.lb-profile {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.lb-profile > img {
+  width: 40px;
+  height: auto;
+  object-fit: cover;
+}
+
+.lb-profile > h1 {
+  font-size: 2.5vh;
+}

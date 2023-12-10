@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Outfit", Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -13,9 +12,8 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding-right: 10vw;
-  padding-left: 10vw;
   overflow-x: hidden;
+  background-color: #18191a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
@@ -25,6 +23,4 @@ body {
 .App {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  margin: 0 auto;
 }

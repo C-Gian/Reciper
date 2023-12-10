@@ -1,7 +1,7 @@
 import React from "react";
-import "./Righter.css";
+import "./RightBar.css";
 
-export const Righter = () => {
+export const RightBar = () => {
   return <div className="righter"></div>;
 };
 

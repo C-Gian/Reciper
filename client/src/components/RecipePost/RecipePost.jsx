@@ -1,9 +1,9 @@
 import React from "react";
-import "./RecipeCard.css";
+import "./RecipePost.css";
 import { Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
 
-export const RecipeCard = ({ recipe, index, size }) => {
+export const RecipePost = ({ recipe, index }) => {
   const {
     imageUrl,
     title,
@@ -20,8 +20,11 @@ export const RecipeCard = ({ recipe, index, size }) => {
     type,
     healthy,
   } = recipe;
-  return (
-    <div className="recipe-container" style={{ width: size.w }}>
+  return <div></div>;
+};
+
+{
+  /* <div className="recipe-container">
       <Link
         to={{
           pathname: "/recipe",
@@ -29,7 +32,7 @@ export const RecipeCard = ({ recipe, index, size }) => {
         state={recipe}
         key={index}
       >
-        <div className="recipe-t-container" style={{ height: size.h }}>
+        <div className="recipe-t-container">
           <img src={imageUrl} alt={title}></img>
           <div className="recipet-saveicon">
             <svg
@@ -135,40 +138,8 @@ l1683 -1683 45 0 45 0 1756 1757 c965 967 1782 1789 1815 1827 32 37 68 78 79
             <label>{Math.floor(ratingVote * 10) / 10}</label>
             <label>{`(${totalRatings})`}</label>
           </div>
-          {/* <div className="recipeb-infos">
-            <div className="recipebinfo">
-              <img src="assets\images\recipes\price_icon.png" alt="price"></img>
-              <h1>Price</h1>
-              <label>
-                {price <= 5 ? "low" : price <= 10 ? "medium" : "high"}
-              </label>
-            </div>
-            <div className="recipebinfo">
-              <img
-                src="assets\images\recipes\difficulty_icon.png"
-                alt="price"
-              ></img>
-              <h1>Difficulty</h1>
-              <label>{difficulty}</label>
-            </div>
-            <div className="recipebinfo">
-              <img
-                src="assets\images\recipes\healthy_icon.png"
-                alt="price"
-              ></img>
-              <h1>Healthy</h1>
-              <label>{healthy ? "yes" : "no"}</label>
-            </div>
-          </div> */}
-          {/* <button
-          onClick={() => saveRecipe(recipe._id)}
-          disabled={isRecipeSaved(recipe._id)}
-          >
-            {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
-            Save
-          </button> */}
+          
         </div>
       </Link>
-    </div>
-  );
-};
+    </div> */
+}

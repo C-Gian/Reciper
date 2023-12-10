@@ -2,23 +2,16 @@
 
 .recipe-container {
   display: flex;
-  width: 400px;
+  width: 100%;
   flex-direction: column;
-  transition: transform 0.1s ease-in-out;
   cursor: pointer;
   gap: 10px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 0 10px 0 rgba(33, 33, 33, 0.1);
 }
 
 .recipe-container-header {
   flex: 1;
   gap: 50px;
-}
-
-.recipe-container:hover {
-  transform: scale(1.05); /* Ingrossamento del 5% */
 }
 
 .recipe-t-container {

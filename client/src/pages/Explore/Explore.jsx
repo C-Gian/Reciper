@@ -1,10 +1,10 @@
+import "./Explore.css";
 import React, { useEffect, useState } from "react";
-import "./SearchRecipes.css";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { RecipeCard } from "../../components/index";
 
-export const SearchRecipes = () => {
+export const Explore = () => {
   const query = useLocation().state;
   const [recipes, setRecipes] = useState([]);
 
@@ -27,9 +27,9 @@ export const SearchRecipes = () => {
   }, [query]);
 
   return (
-    <div className="searchrecipes-container">
+    <div className="explore-container">
       <h1>{query ? `Recipes with "${query}"` : "All Recipes"}</h1>
-      <div className="searchrecipes">
+      <div className="explore">
         {recipes.map((recipe) => (
           <RecipeCard
             recipe={recipe}

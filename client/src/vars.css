@@ -33,4 +33,13 @@
   --font-base: "GothamBook";
   --font-bold: "brandon-bold";
   --font-ballada: "ballada";
+
+  /* margins paddings */
+  --marg-small: 15px;
+  --marg-medium: 30px;
+  --marg-big: 45px;
+
+  --pad-small: 15px;
+  --pad-medium: 30px;
+  --pad-big: 45px;
 }

@@ -1,7 +1,5 @@
-import { Navbar } from "./Navbar/Navbar";
-import { QandA } from "./QandA/QandA";
-import { Review } from "./Review/Review";
-import { RecipeCard } from "./RecipeCard/RecipeCard";
-import { Righter } from "./Righter/Righter";
+import { LeftBar } from "./LeftBar/LeftBar";
+import { RecipePost } from "./RecipePost/RecipePost";
+import { RightBar } from "./RightBar/RightBar";
 
-export { Navbar, QandA, Review, RecipeCard, Righter };
+export { LeftBar, RecipePost, RightBar };

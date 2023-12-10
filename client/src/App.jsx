@@ -1,30 +1,35 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
-  Home,
   Auth,
+  Profile,
+  Home,
+  Explore,
+  Notifications,
+  Messages,
   MyRecipes,
-  Recipe,
   CreateRecipe,
-  SearchRecipes,
+  Recipe,
 } from "./pages";
-import { Navbar, Righter } from "./components";
+import { LeftBar, RightBar } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar></Navbar>
+        <LeftBar></LeftBar>
         <Routes>
           <Route path="/auth" element={<Auth />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/" element={<Home />} />
-          <Route path="/random-recipes" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/messages" element={<Messages />} />
           <Route path="/my-recipes" element={<MyRecipes />} />
-          <Route path="/search-recipes" element={<SearchRecipes />} />
           <Route path="/create-recipe" element={<CreateRecipe />} />
           <Route path="/recipe" element={<Recipe />} />
         </Routes>
-        <Righter></Righter>
+        <RightBar></RightBar>
       </Router>
     </div>
   );
