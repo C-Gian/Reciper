@@ -20,7 +20,24 @@ export const RecipePost = ({ recipe, index }) => {
     type,
     healthy,
   } = recipe;
-  return <div></div>;
+
+  return (
+    <div className="recipepost-container">
+      <div className="rp-header">
+        <img src="\assets\images\leftbar\profile_icon.png" alt="" />
+        <div className="rph-infos">
+          <h1>Gabriella Monez</h1>
+          <h3>2h</h3>
+        </div>
+        <div>
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+      </div>
+      <p className="rp-description">{description.slice(0, 300)}</p>
+      <img src={imageUrl} alt="" />
+    </div>
+  );
 };
 
 {
