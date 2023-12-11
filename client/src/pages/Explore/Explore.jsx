@@ -2,7 +2,7 @@ import "./Explore.css";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import { RecipeCard } from "../../components/index";
+import { RecipePost } from "../../components/index";
 
 export const Explore = () => {
   const query = useLocation().state;

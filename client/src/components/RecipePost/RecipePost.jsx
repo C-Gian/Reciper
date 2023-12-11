@@ -22,9 +22,11 @@ export const RecipePost = ({ recipe, index }) => {
   } = recipe;
 
   return (
-    <div className="recipepost-container">
+    <div className="rrr">
       <div className="rp-header">
-        <img src="\assets\images\leftbar\profile_icon.png" alt="" />
+        <Link to="/profile">
+          <img src="\assets\images\leftbar\profile_icon.png" alt="" />
+        </Link>
         <div className="rph-infos">
           <h1>Gabriella Monez</h1>
           <h3>2h</h3>
@@ -34,8 +36,29 @@ export const RecipePost = ({ recipe, index }) => {
           <img src="" alt="" />
         </div>
       </div>
-      <p className="rp-description">{description.slice(0, 300)}</p>
-      <img src={imageUrl} alt="" />
+      <div className="recipepost-container">
+        <div className="rp-infos">
+          <h1>{title}</h1>
+          <p className="rpi-description">{description.slice(0, 300)}</p>
+          <div className="rpi-itp">
+            <div className="rpi-item">
+              <h1>{ingredients.length}</h1>
+              <label>Ingredients</label>
+            </div>
+            <div className="rpi-divider"></div>
+            <div className="rpi-item">
+              <h1>{prepTime + cookTime + chillTime}</h1>
+              <label>Minutes</label>
+            </div>
+            <div className="rpi-divider"></div>
+            <div className="rpi-item">
+              <h1>{price}$</h1>
+              <label>Price</label>
+            </div>
+          </div>
+        </div>
+        <div className="rp-img">{<img src={imageUrl} alt={title} />}</div>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Recipe.css";
 import { Link, useLocation } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
-import { QandA, Review, RecipeCard } from "../../components/index";
+import { RecipePost } from "../../components/index";
 import axios from "axios";
 
 export const Recipe = () => {
@@ -320,7 +320,7 @@ export const Recipe = () => {
             </ul>
           </div>
         </div>
-        <div className="recipefull-qa-container">
+        {/* <div className="recipefull-qa-container">
           <h1>QUESTIONS</h1>
           <div className="recipefullqa-ask">
             <Link to="/">
@@ -433,7 +433,7 @@ export const Recipe = () => {
               ></RecipeCard>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
