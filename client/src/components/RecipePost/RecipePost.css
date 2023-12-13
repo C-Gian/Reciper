@@ -1,15 +1,178 @@
 @import "../../vars.css";
 
 .recipepost-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: fit-content;
+  background-color: #242526;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.rp-header {
+.rp-t {
   display: flex;
   color: white;
-  gap: 10px;
+  justify-content: space-between;
 }
 
-.rp-header > a > img {
+.rph-imginfos {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rph-imginfos > a > img {
   width: 50px;
   height: auto;
+}
+
+.rph-infos {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: fit-content;
+  justify-content: space-around;
+}
+
+.rph-infos > h3 {
+  font-weight: 100;
+  font-size: 0.8vw;
+}
+
+.rph-dots {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rph-dots:hover {
+  background-color: rgb(184, 184, 184);
+}
+
+.rp-c {
+  display: flex;
+  margin-top: 30px;
+}
+
+.rpc-l {
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  color: white;
+  flex: 1;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 10px 0 10px 0;
+}
+
+.rpcl-t {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rpcl-title {
+  font-size: 2.2vw;
+}
+
+.rpcl-description {
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.rpc-r {
+  display: flex;
+  flex: 1;
+}
+
+.rpc-r > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rpcl-b {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  padding: 20px 10px 20px 0;
+  justify-content: space-around;
+}
+
+.rpcli-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.rpcli-item > h1 {
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+
+.rpcli-item > label {
+  font-size: 1vw;
+  font-weight: 900;
+}
+
+.rp-b {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.rpb-t {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+}
+
+.rpbt-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.rpbt-item > label {
+  cursor: pointer;
+}
+
+.rpbt-item:hover {
+  background-color: #acacac32;
+}
+
+.rpbt-item svg {
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.rpbt-item:first-child:hover svg {
+  fill: rgb(248, 0, 0) !important;
+}
+
+.rpbt-item:nth-child(3):hover svg {
+  fill: rgb(0, 153, 248) !important;
+}
+
+.rpbt-item:last-child:hover svg {
+  fill: rgb(217, 172, 10) !important;
+}
+
+.rpbt-divider {
+  width: 1px;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.346);
 }
