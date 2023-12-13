@@ -11,14 +11,8 @@ export const RecipePost = ({ recipe, index }) => {
     cookTime,
     chillTime,
     description,
-    instructions,
     ingredients,
-    ratingVote,
-    totalRatings,
-    difficulty,
     price,
-    type,
-    healthy,
   } = recipe;
   const likes = 745;
   const comments = 123;
@@ -48,7 +42,7 @@ export const RecipePost = ({ recipe, index }) => {
         <div className="rpc-l">
           <div className="rpcl-t">
             <h1 className="rpcl-title">{title}</h1>
-            <h1 className="rpcl-description">{description}</h1>
+            <h1 className="rpcl-description">{description.slice(0, 200)}</h1>
           </div>
           <div className="rpcl-b">
             <div className="rpcli-item">
