@@ -22,5 +22,9 @@ body {
 
 .App {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.app-content {
+  display: flex;
 }

@@ -1,0 +1,49 @@
+@import "../../vars.css";
+
+.header-container {
+  display: flex;
+  background-color: #18191a;
+  height: 56px;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.h-left {
+  display: flex;
+  height: 100%;
+  width: fit-content;
+  text-decoration: none;
+  color: white;
+  gap: 10px;
+  padding: var(--pad-medium);
+  align-items: center;
+}
+
+.h-left > img {
+  width: 35px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.h-left > h1 {
+  font-size: 1.7vw;
+  font-family: var(--font-ballada);
+}
+
+.h-right {
+  display: flex;
+  height: 100%;
+  width: fit-content;
+  align-items: center;
+  padding: var(--pad-medium);
+}
+
+.h-right > a > img {
+  width: 40px;
+  height: auto;
+  object-fit: cover;
+}

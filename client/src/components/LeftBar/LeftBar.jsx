@@ -11,10 +11,6 @@ export const LeftBar = () => {
   return (
     <aside className="leftbar-container">
       <div className="lb-container">
-        <Link to="/" className="lb-header">
-          <img src="\assets\images\leftbar\logo.png" alt="" />
-          <h1>Reciper</h1>
-        </Link>
         <div className="lb-links">
           <Link to="/" className={`lb-link ${isActive("/") ? "active" : ""}`}>
             <svg viewBox="0 0 24 24" ariaHidden="true" className="lb-icon">
@@ -127,15 +123,6 @@ export const LeftBar = () => {
               ></line>
             </svg>
             <h1>Create Recipe</h1>
-          </Link>
-        </div>
-        <div className="lb-logout">
-          <Link
-            to={!cookies.access_token ? "/auth" : "/profile"}
-            className="lb-profile"
-          >
-            <img src="\assets\images\leftbar\profile_icon.png" alt="" />
-            <h1>Shibaka</h1>
           </Link>
         </div>
       </div>

@@ -1,47 +1,56 @@
 @import "../../vars.css";
 
 .recipepost-container {
+  /* width: calc(100% / 4 - 16px - 0.01px); */
   display: flex;
   flex-direction: column;
-  width: 90%;
+  box-sizing: border-box;
   height: fit-content;
-  background-color: #242526;
-  padding: 20px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .rp-t {
+  display: flex;
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.rp-t > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.rp-c {
   display: flex;
   color: white;
   justify-content: space-between;
 }
 
-.rph-imginfos {
+.rpc-imginfos {
   display: flex;
   gap: 10px;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.rph-imginfos > a > img {
+.rpc-img > img {
+  display: flex;
   width: 50px;
   height: auto;
+  object-fit: cover;
 }
 
-.rph-infos {
+.rpc-infos {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: fit-content;
-  justify-content: space-around;
 }
 
-.rph-infos > h3 {
-  font-weight: 100;
-  font-size: 0.8vw;
+.rpc-infos > h1 {
+  font-size: 1.5vw;
 }
 
-.rph-dots {
+.rpc-dots {
   display: flex;
   width: 40px;
   height: 40px;
@@ -51,83 +60,14 @@
   transition: background-color 0.3s ease;
 }
 
-.rph-dots:hover {
+.rpc-dots:hover {
   background-color: rgb(184, 184, 184);
-}
-
-.rp-c {
-  display: flex;
-  margin-top: 30px;
-}
-
-.rpc-l {
-  display: flex;
-  height: 300px;
-  flex-direction: column;
-  color: white;
-  flex: 1;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 10px 0 10px 0;
-}
-
-.rpcl-t {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.rpcl-title {
-  font-size: 2.2vw;
-}
-
-.rpcl-description {
-  font-size: 1vw;
-  font-weight: 500;
-}
-
-.rpc-r {
-  display: flex;
-  flex: 1;
-}
-
-.rpc-r > img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.rpcl-b {
-  display: flex;
-  width: 100%;
-  gap: 10px;
-  padding: 20px 10px 20px 0;
-  justify-content: space-around;
-}
-
-.rpcli-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-.rpcli-item > h1 {
-  font-size: 1.1vw;
-  font-weight: 500;
-}
-
-.rpcli-item > label {
-  font-size: 1vw;
-  font-weight: 900;
 }
 
 .rp-b {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .rpb-t {

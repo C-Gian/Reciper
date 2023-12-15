@@ -36,9 +36,12 @@ export const Home = () => {
 
   return (
     <div className="home-container">
-      {highlightRecipes.map((recipePost) => (
-        <RecipePost recipe={recipePost} key={recipePost._id}></RecipePost>
-      ))}
+      <h1>Recipes</h1>
+      <div className="home-recipes">
+        {recipes.map((recipePost) => (
+          <RecipePost recipe={recipePost} key={recipePost._id}></RecipePost>
+        ))}
+      </div>
     </div>
   );
 };

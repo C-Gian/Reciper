@@ -1,9 +1,0 @@
-@import "../../vars.css";
-
-.righter {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: chartreuse;
-  height: 500px;
-}
