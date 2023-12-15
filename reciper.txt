@@ -1,0 +1,23 @@
+Reciper:
+
+
+Ogni ricetta se cliccata ha la sua pagina con tutte le info specifiche, tipo le istruzioni, ingredienti,  la sua sezioni commenti e risposte, etc... 
+Ogni utente registrato ha una sezione myrecipes in cui ci sono tutte le ricette create e quelle salvate. 
+Badge che mostrano utenti più attivi e meritocratici.
+Ad ogni ricetta, gli utenti registrati possono mettere like, commentare e salvarla nelle proprie ricette. 
+Ci sarà una sezione notifiche che avvisa dei likes e commenti. 
+Gli utenti registrati hanno un profilo con le varie informazioni, gli utenti tra loro possono seguirsi e quindi vedere apparire nella home nei feed le loro ricette. 
+Ogni utente potrà decidere la visibilità del suo profilo, privato significa che le ricette non vengono viste, pubblico si.
+Quando un profilo pubblica una ricetta, essa compare nella home nel feed di tutte le persone che seguono tale profilo.
+Le ricette possono essere votate tramite le stelle, da 1 a 5. 
+Ci sarà una sezione explore in cui ci saranno le "ricette popolari" cioè quelle con voto più alto ed le ricette/profili suggeriti.
+Ci sarà un sistema di autenticazione, quindi creazione profilo, login e logout.
+Ci sarà una pagina dedicata alla ricerca delle ricette, dove cioè ci sono tutte le ricette possibili e tramite una searchbar si può cercare una ricetta specifica, utilizzando anche filtri, tra i quali must have(ingredienti) oppure allergie/intolleranze.
+Possibilità di convertire automaticamente le misure degli ingredienti in base al numero di porzioni desiderate.
+Suggerimento modifica ricetta.
+
+Da aggiungere in futuro:
+Possibilità di inserire più foto e video.
+Eventi: live programmate alle quali gli utenti possono segnarsi anticipatamente per avere promemoria e nelle quali si cucinano ricette live.
+Schede nutrizionali con API.
+Ingredienti: usare API per avere lista completa ingredienti cosi che utente deve scegliere e non solo inserire manualmente.
