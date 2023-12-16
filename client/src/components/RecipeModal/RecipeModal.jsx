@@ -6,13 +6,14 @@ export const RecipeModal = ({ recipe, onClose }) => {
   const likes = 745;
   const comments = 123;
   const saved = 54;
+  console.log(recipe);
   return (
     <div className="recipemodal-container" onClick={onClose}>
-      <div className="rp-container">
+      <div className="rp-container" onClick={(e) => e.stopPropagation()}>
         <div className="rpc-l">
           <div className="rpcl-t">
-            <div className="rpclt-imginfos">
-              <div className="rpclt-img">
+            <div className="rpclt-profinfos">
+              <div className="rpclt-prof">
                 <img
                   src="\assets\images\recipecard\profile_icon.png"
                   alt="user"
@@ -32,13 +33,15 @@ export const RecipeModal = ({ recipe, onClose }) => {
                 </div>
               </div>
             </div>
-            <img src={recipe.imageUrl} alt="recipe image" />
+            <div className="rpclt-img">
+              <img src={recipe.imageUrl} alt="recipe image" />
+            </div>
           </div>
           <div className="rpcl-b">
             <div className="rpclb-item">
               <svg
                 viewBox="0 0 24 24"
-                ariaHidden="true"
+                aria-hidden="true"
                 width={20}
                 fill="white"
               >
@@ -52,7 +55,7 @@ export const RecipeModal = ({ recipe, onClose }) => {
             <div className="rpclb-item">
               <svg
                 viewBox="0 0 24 24"
-                ariaHidden="true"
+                aria-hidden="true"
                 width={20}
                 fill="white"
               >
@@ -65,8 +68,26 @@ export const RecipeModal = ({ recipe, onClose }) => {
           </div>
         </div>
         <div className="rpc-r">
-          <h1>Comments</h1>
-          <div className="rpcr-comments">{comments.map}</div>
+          <div className="rpcr-header">
+            <h1>Comments</h1>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M18.707 5.293a1 1 0 0 0-1.414 0L12 10.586 6.707 5.293a1 1 0 0 0-1.414 1.414L10.586 12l-5.293 5.293a1 1 0 1 0 1.414 1.414L12 13.414l5.293 5.293a1 1 0 0 0 1.414-1.414L13.414 12l5.293-5.293a1 1 0 0 0 0-1.414z"></path>
+            </svg>
+          </div>
+          <div className="rpcr-comments">
+            {recipe.comments.map((comment, cIndex) => {
+              <div className="rpcr-comment" key={cIndex}>
+                <h1>{comment.content}</h1>
+                <div>
+                  {comment.replies.map((reply, rIndex) => {
+                    <div className="rpcrc-reply" key={rIndex}>
+                      {reply.content}
+                    </div>;
+                  })}
+                </div>
+              </div>;
+            })}
+          </div>
         </div>
       </div>
     </div>

@@ -30,8 +30,6 @@
 .rpc-l {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 80%;
   overflow: hidden;
   flex: 1;
 }
@@ -49,18 +47,18 @@
   border-radius: 20px;
 }
 
-.rpclt-imginfos {
+.rpclt-profinfos {
   display: flex;
   width: 100%;
   gap: 10px;
 }
 
-.rpclt-img {
+.rpclt-prof {
   width: 70px;
   height: 70px;
 }
 
-.rpclt-img > img {
+.rpclt-prof > img {
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -78,8 +76,25 @@
   font-size: 2.3vw;
 }
 
+.rpclt-rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
 .rpclt-rating > label {
   color: white;
+}
+
+.rpclt-img {
+  width: 100%;
+}
+
+.rpclt-img > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .rpcl-b {
@@ -142,4 +157,39 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.rpcr-header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.rpcr-header > h1 {
+  font-size: 2vw;
+}
+
+.rpcr-comments {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: blue;
+  width: 100%;
+  height: 300px;
+}
+
+.rpcr-comment {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-color: bisque;
+}
+
+.rpcrc-reply {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(168, 108, 35);
 }
