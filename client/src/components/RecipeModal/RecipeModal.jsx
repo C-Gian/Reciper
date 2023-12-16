@@ -64,9 +64,9 @@ export const RecipeModal = ({ recipe, onClose }) => {
             </div>
           </div>
         </div>
-        <div className="rpc-divider"></div>
         <div className="rpc-r">
           <h1>Comments</h1>
+          <div className="rpcr-comments">{comments.map}</div>
         </div>
       </div>
     </div>
