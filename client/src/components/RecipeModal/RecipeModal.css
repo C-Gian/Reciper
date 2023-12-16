@@ -1,0 +1,140 @@
+@import "../../vars.css";
+
+.recipemodal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 31, 31, 0.554);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.rp-container {
+  display: flex;
+  height: 60%;
+  width: 60%;
+  background-color: #18191a;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+  align-items: center;
+}
+
+.rpc-l {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rpcl-t {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rpcl-t > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.rpclt-imginfos {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.rpclt-img {
+  width: 70px;
+  height: 70px;
+}
+
+.rpclt-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rpclt-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rpclt-infos > h1 {
+  color: white;
+  font-size: 2.3vw;
+}
+
+.rpclt-rating > label {
+  color: white;
+}
+
+.rpcl-b {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.rpclb-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.rpclb-item > label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.rpclb-item:hover {
+  background-color: #acacac32;
+}
+
+.rpclb-item svg {
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.rpclb-item:first-child:hover svg {
+  fill: rgb(248, 0, 0) !important;
+}
+
+.rpclb-item:nth-child(3):hover svg {
+  fill: rgb(0, 153, 248) !important;
+}
+
+.rpclb-item:last-child:hover svg {
+  fill: rgb(217, 172, 10) !important;
+}
+
+.rpclb-divider {
+  width: 1px;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.346);
+}
+
+.rpc-divider {
+  width: 1px;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.337);
+  border-radius: 20px;
+}
+
+.rpc-r {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
