@@ -8,46 +8,65 @@
   height: fit-content;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  user-select: none;
+}
+
+.recipepost-container:hover {
+  transform: scale(1.05);
 }
 
 .rp-t {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.rpt-t {
   display: flex;
   margin-bottom: 20px;
   height: 200px;
 }
 
-.rp-t > img {
+.rpt-t > img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
   object-fit: cover;
 }
 
-.rp-c {
+.rpt-b {
   display: flex;
   color: white;
-  justify-content: space-between;
-}
-
-.rpc-imginfos {
-  display: flex;
   gap: 10px;
 }
 
-.rpc-img > img {
+.rptb-img > img {
   display: flex;
   width: 50px;
   height: auto;
   object-fit: cover;
 }
 
-.rpc-infos {
+.rptb-infos {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
-.rpc-infos > h1 {
+.rptb-infos > h1 {
   font-size: 1.5vw;
+}
+
+.rptbi-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rptbi-rating > label {
+  font-size: 0.8vw;
 }
 
 .rpc-dots {
@@ -66,18 +85,13 @@
 
 .rp-b {
   display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-
-.rpb-t {
-  display: flex;
   justify-content: space-around;
   color: white;
   align-items: center;
+  margin-top: 10px;
 }
 
-.rpbt-item {
+.rpb-item {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -86,32 +100,33 @@
   border-radius: 20px;
 }
 
-.rpbt-item > label {
+.rpb-item > label {
   cursor: pointer;
+  user-select: none;
 }
 
-.rpbt-item:hover {
+.rpb-item:hover {
   background-color: #acacac32;
 }
 
-.rpbt-item svg {
+.rpb-item svg {
   fill: white;
   transition: fill 0.3s ease;
 }
 
-.rpbt-item:first-child:hover svg {
+.rpb-item:first-child:hover svg {
   fill: rgb(248, 0, 0) !important;
 }
 
-.rpbt-item:nth-child(3):hover svg {
+.rpb-item:nth-child(3):hover svg {
   fill: rgb(0, 153, 248) !important;
 }
 
-.rpbt-item:last-child:hover svg {
+.rpb-item:last-child:hover svg {
   fill: rgb(217, 172, 10) !important;
 }
 
-.rpbt-divider {
+.rpb-divider {
   width: 1px;
   height: 50%;
   background-color: rgba(255, 255, 255, 0.346);
