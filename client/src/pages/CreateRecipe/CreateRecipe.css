@@ -6,6 +6,9 @@
   width: 100%;
   height: fit-content;
   padding: 20px;
+  color: white;
+  margin-left: 260px;
+  margin-right: 30px;
 }
 
 .cr-form {
@@ -31,4 +34,21 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+input,
+textarea,
+button,
+select {
+  background-color: rgba(255, 255, 255, 0.109);
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  color: white;
+}
+
+textarea {
+  height: 100px !important;
 }

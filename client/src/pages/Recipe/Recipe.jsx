@@ -178,13 +178,16 @@ export const Recipe = () => {
   const updateReview = async (recipeID, vote) => {
     try {
       // Invia una richiesta PUT al server per aggiornare la ricetta
-      const response = await axios.put("http://localhost:3001/recipe/update", {
-        newReviewVote:
-          (state.ratingVote * state.totalRatings + vote) /
-          (state.totalRatings + 1),
-        newTotalReviews: state.totalRatings + 1,
-        recipeID: recipeID,
-      });
+      const response = await axios.put(
+        "http://localhost:3001/recipe/updateReview",
+        {
+          newReviewVote:
+            (state.ratingVote * state.totalRatings + vote) /
+            (state.totalRatings + 1),
+          newTotalReviews: state.totalRatings + 1,
+          recipeID: recipeID,
+        }
+      );
       console.log("Aggiornato con successo", response);
     } catch (error) {
       console.error("Errore durante l aggiornamento della valutazione:", error);

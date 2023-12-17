@@ -1,0 +1,7 @@
+@import "../../vars.css";
+
+.auth-container {
+  margin-left: 260px;
+  margin-right: 30px;
+  padding: 20px;
+}

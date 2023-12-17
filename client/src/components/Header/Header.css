@@ -3,7 +3,7 @@
 .header-container {
   display: flex;
   background-color: #18191a;
-  height: 56px;
+  height: 70px;
   align-items: center;
   justify-content: space-between;
   position: sticky;
@@ -13,12 +13,12 @@
 
 .h-left {
   display: flex;
-  height: 100%;
+  height: fit-content;
   width: fit-content;
   text-decoration: none;
   color: white;
   gap: 10px;
-  padding: var(--pad-medium);
+  margin-left: var(--marg-medium);
   align-items: center;
 }
 
@@ -36,14 +36,51 @@
 
 .h-right {
   display: flex;
-  height: 100%;
+  height: fit-content;
   width: fit-content;
   align-items: center;
-  padding: var(--pad-medium);
+  margin-right: var(--marg-medium);
 }
 
-.h-right > a > img {
-  width: 40px;
+.hr-user-container {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+  cursor: pointer;
+}
+
+.hr-notuser {
+  display: flex;
+  height: 50px;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px 5px 10px;
+  background-color: rgba(255, 255, 255, 0.058);
+  border-radius: 10px;
+}
+
+.hr-notuser > img {
+  width: 30px;
   height: auto;
-  object-fit: cover;
+}
+
+.hr-notuser > label {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hr-user {
+  width: fit-content;
+  height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hr-user > img {
+  width: 40px;
+  height: 100%;
 }

@@ -27,6 +27,9 @@ export const CreateRecipe = () => {
     type: "",
     healthy: "",
     date: "",
+    comments: [],
+    likes: 0,
+    saved: 0,
     userOwner: userID,
   });
 

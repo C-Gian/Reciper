@@ -6,7 +6,6 @@ export const RecipeModal = ({ recipe, onClose }) => {
   const likes = 745;
   const comments = 123;
   const saved = 54;
-  console.log(recipe);
   return (
     <div className="recipemodal-container" onClick={onClose}>
       <div className="rp-container" onClick={(e) => e.stopPropagation()}>
@@ -75,18 +74,34 @@ export const RecipeModal = ({ recipe, onClose }) => {
             </svg>
           </div>
           <div className="rpcr-comments">
-            {recipe.comments.map((comment, cIndex) => {
+            {recipe.comments.map((comment, cIndex) => (
               <div className="rpcr-comment" key={cIndex}>
-                <h1>{comment.content}</h1>
-                <div>
-                  {comment.replies.map((reply, rIndex) => {
-                    <div className="rpcrc-reply" key={rIndex}>
-                      {reply.content}
-                    </div>;
-                  })}
+                <div className="rpcrc-title">
+                  <img
+                    src="\assets\images\recipecard\profile_icon.png"
+                    alt=""
+                  />
+                  <h1>{comment.content}</h1>
                 </div>
-              </div>;
-            })}
+                <div className="rpcrc-replies">
+                  {comment.replies.map((reply, rIndex) => (
+                    <div className="rpcrc-reply">
+                      <div className="rpcrcr-left">
+                        <div className="rpcrcrl-line"></div>
+                      </div>
+                      <div className="rpcrcr-content" key={rIndex}>
+                        <img
+                          src="\assets\images\recipecard\profile_icon.png"
+                          alt=""
+                        />
+                        <h1>@{comment.commentOwner}</h1>
+                        <label>{reply.content}</label>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

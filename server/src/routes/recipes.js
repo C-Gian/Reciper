@@ -50,12 +50,27 @@ router.put("/", verifyToken, async (req, res) => {
   }
 });
 
-router.put("/update", async (req, res) => {
+router.put("/updateReview", async (req, res) => {
   const { newReviewVote, newTotalReviews, recipeID } = req.body;
   try {
     const updatedRecipe = await RecipeModel.findByIdAndUpdate(
       recipeID,
       { $set: { ratingVote: newReviewVote, totalRatings: newTotalReviews } },
+      { new: true }
+    );
+    res.json(updatedRecipe);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Errore nell aggiornamento della ricetta" });
+  }
+});
+
+router.put("/updateLikes", async (req, res) => {
+  const { newLikesTotal, recipeID } = req.body;
+  try {
+    const updatedRecipe = await RecipeModel.findByIdAndUpdate(
+      recipeID,
+      { $set: { likes: newLikesTotal } },
       { new: true }
     );
     res.json(updatedRecipe);
