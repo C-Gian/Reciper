@@ -1,5 +1,4 @@
 import express from "express";
-import mongoose from "mongoose";
 import { UserModel } from "../models/Users.js";
 import { RecipeModel } from "../models/Recipes.js";
 import { verifyToken } from "./users.js";
@@ -50,7 +49,7 @@ router.put("/", verifyToken, async (req, res) => {
   }
 });
 
-router.put("/updateReview", async (req, res) => {
+router.put("/updateReview", verifyToken, async (req, res) => {
   const { newReviewVote, newTotalReviews, recipeID } = req.body;
   try {
     const updatedRecipe = await RecipeModel.findByIdAndUpdate(
@@ -65,7 +64,7 @@ router.put("/updateReview", async (req, res) => {
   }
 });
 
-router.put("/updateLikes", async (req, res) => {
+router.put("/update-likes", verifyToken, async (req, res) => {
   const { newLikesTotal, recipeID } = req.body;
   try {
     const updatedRecipe = await RecipeModel.findByIdAndUpdate(
