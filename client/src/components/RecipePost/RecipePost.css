@@ -7,6 +7,8 @@
   box-sizing: border-box;
   height: fit-content;
   border-radius: 10px;
+  box-sizing: border-box;
+  min-height: 250px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
@@ -29,16 +31,20 @@
 }
 
 .rpt-t {
-  display: flex;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
   margin-bottom: 20px;
-  height: 200px;
 }
 
 .rpt-t > img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .rpt-b {
@@ -91,19 +97,23 @@
 
 .rp-b {
   display: flex;
-  justify-content: space-around;
   color: white;
   align-items: center;
   margin-top: 10px;
+  gap: 5px;
 }
 
 .rpb-item {
   display: flex;
-  gap: 10px;
+  gap: 5px;
+  flex: 1;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   padding: 10px;
   border-radius: 20px;
+  fill: white;
+  transition: fill 0.3s ease;
 }
 
 .rpb-item > label {
@@ -112,7 +122,7 @@
 }
 
 .rpb-item:hover {
-  background-color: #acacac32;
+  background-color: #acacac0f;
 }
 
 .rpb-item svg {
@@ -120,16 +130,42 @@
   transition: fill 0.3s ease;
 }
 
-.rpb-item:first-child:hover svg {
-  fill: rgb(248, 0, 0) !important;
+.rpbi-liked {
+  fill: #f91880 !important;
+  color: #f91880 !important;
+  animation: pulse 0.1s ease-in-out;
 }
 
-.rpb-item:nth-child(3):hover svg {
-  fill: rgb(0, 153, 248) !important;
+.rpbi-like.rpbi-liked:hover {
+  fill: #f91880 !important;
+  color: #f91880 !important;
 }
 
-.rpb-item:last-child:hover svg {
-  fill: rgb(217, 172, 10) !important;
+.rpb-item:hover svg {
+  fill: rgba(179, 179, 179, 0.81);
+}
+
+.rpbi-saved {
+  fill: #ffd700 !important;
+  color: #ffd700 !important;
+  animation: pulse 0.1s ease-in-out;
+}
+
+.rpbi-save.rpbi-saved:hover {
+  fill: #ffd700 !important;
+  color: #ffd700 !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .rpb-divider {

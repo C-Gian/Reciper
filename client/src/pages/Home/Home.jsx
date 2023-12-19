@@ -7,6 +7,7 @@ import { useCookies } from "react-cookie";
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [likedRecipes, setLikedRecipes] = useState([]);
+  const [savedRecipes, setSavedRecipes] = useState([]);
   const [cookies, setCookies] = useCookies(["access_token"]);
 
   useEffect(() => {
@@ -25,22 +26,23 @@ export const Home = () => {
   }, []);
 
   useEffect(() => {
-    const fetchLikedRecipes = async () => {
+    const fetchLikedSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/auth/get-liked-recipes`,
+          `http://localhost:3001/auth/get-liked-saved-recipes`,
           {
             headers: { authorization: cookies.access_token },
           }
         );
 
         setLikedRecipes(response.data.likedRecipes);
+        setSavedRecipes(response.data.savedRecipes);
       } catch (error) {
         console.error("Error fetching liked recipes", error);
       }
     };
 
-    fetchLikedRecipes();
+    fetchLikedSavedRecipes();
   }, []);
 
   return (
@@ -52,6 +54,7 @@ export const Home = () => {
             recipe={recipePost}
             key={recipePost._id}
             likedRecipes={likedRecipes}
+            savedRecipes={savedRecipes}
           ></RecipePost>
         ))}
       </div>

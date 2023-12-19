@@ -67,15 +67,38 @@ router.put("/updateReview", verifyToken, async (req, res) => {
 router.put("/update-likes", verifyToken, async (req, res) => {
   const { newLikesTotal, recipeID } = req.body;
   try {
-    const updatedRecipe = await RecipeModel.findByIdAndUpdate(
-      recipeID,
-      { $set: { likes: newLikesTotal } },
-      { new: true }
-    );
-    res.json(updatedRecipe);
+    if (newLikesTotal >= 0) {
+      const updatedRecipe = await RecipeModel.findByIdAndUpdate(
+        recipeID,
+        { $set: { likes: newLikesTotal } },
+        { new: true }
+      );
+      res.json(updatedRecipe);
+    } else {
+      res.json("Can't go below 0 likes");
+    }
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Errore nell aggiornamento della ricetta" });
+    res.status(500).json({ error: "server error updating recipe likes count" });
+  }
+});
+
+router.put("/update-saved", verifyToken, async (req, res) => {
+  const { newSavedTotal, recipeID } = req.body;
+  try {
+    if (newSavedTotal >= 0) {
+      const updatedRecipe = await RecipeModel.findByIdAndUpdate(
+        recipeID,
+        { $set: { saved: newSavedTotal } },
+        { new: true }
+      );
+      res.json(updatedRecipe);
+    } else {
+      res.json("Can't go below 0 saved");
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "server error updating recipe saved count" });
   }
 });
 
