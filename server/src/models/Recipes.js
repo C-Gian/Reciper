@@ -29,12 +29,12 @@ const RecipeSchema = new mongoose.Schema({
   comments: [
     {
       commentOwner: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
-      date: { type: Date, default: Date.now },
+      commentDate: { type: Date, default: Date.now },
       content: String,
       replies: [
         {
           replyOwner: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
-          date: { type: Date, default: Date.now },
+          replyDate: { type: Date, default: Date.now },
           content: String,
         },
       ],
