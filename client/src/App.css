@@ -28,3 +28,24 @@ body {
 .app-content {
   display: flex;
 }
+
+/* Stile per la scrollbar */
+::-webkit-scrollbar {
+  width: 16px; /* Larghezza della scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ababab; /* Colore del cursore della scrollbar */
+  border-radius: 8px; /* Bordi arrotondati */
+  border: 5px solid rgba(0, 0, 0, 0);
+  background: #909090;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f100; /* Colore della track della scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #747474; /* Cambia colore del cursore quando si passa sopra */
+}

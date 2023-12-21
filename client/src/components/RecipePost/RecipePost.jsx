@@ -33,11 +33,13 @@ export const RecipePost = ({ recipe, index, likedRecipes, savedRecipes }) => {
   const comments = 123;
 
   const openModal = () => {
+    document.body.style.overflow = "hidden";
     setModalOpen(true);
   };
 
   const closeModal = () => {
     setModalOpen(false);
+    document.body.style.overflow = "auto";
   };
 
   const updateLikes = async () => {
