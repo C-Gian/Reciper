@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import "./LeftBar.css";
+import axios from "axios";
 
 export const LeftBar = () => {
   const [cookies, setCookies] = useCookies(["access_token"]);
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
+  const [user, setUser] = useState("");
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchLoggedUser = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3001/auth/user`, {
+          headers: { authorization: cookies.access_token },
+        });
+        setUser(response.data);
+      } catch (error) {
+        console.error("Error while fecthing recipe owner:", error);
+      }
+    };
+
+    fetchLoggedUser();
+  }, []);
 
   return (
     <aside className="leftbar-container">
@@ -79,8 +97,6 @@ export const LeftBar = () => {
             </svg>
             <h1>My Recipes</h1>
           </Link>
-        </div>
-        <div className="lb-create">
           <Link
             to={!cookies.access_token ? "/auth" : "/create-recipe"}
             className={`lb-link ${isActive("/create-recipe") ? "active" : ""}`}
@@ -125,6 +141,18 @@ export const LeftBar = () => {
             <h1>Create Recipe</h1>
           </Link>
         </div>
+        <div className="lb-profile">
+          <img src="\assets\images\header\profile_icon.png" alt="user logged" />
+          <h1>{user.username}</h1>
+        </div>
+        {isMenuOpen && (
+          <div className="lb-profile-modal">
+            <ul>
+              <li>Profilo</li>
+              <li>Logout</li>
+            </ul>
+          </div>
+        )}
       </div>
     </aside>
   );

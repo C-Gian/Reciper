@@ -60,6 +60,19 @@ router.post("/login", async (req, res) => {
   res.json({ token, userID: user._id });
 });
 
+router.get("/user", verifyToken, async (req, res) => {
+  try {
+    const user = await UserModel.findById(req.user);
+    if (!user) {
+      return res.status(404).json({ message: "user not found" });
+    }
+    res.json(user);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "error fetching user" });
+  }
+});
+
 router.put("/edit-liked-recipe", verifyToken, async (req, res) => {
   const { recipeId, toAdd } = req.body;
   try {

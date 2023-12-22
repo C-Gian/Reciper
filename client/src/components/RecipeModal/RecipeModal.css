@@ -204,7 +204,7 @@
   display: flex;
   flex-direction: column;
   margin: 20px 10px 20px 20px;
-  gap: 50px;
+  gap: 30px;
   overflow-y: auto;
   padding-right: 15px;
 }
@@ -248,9 +248,12 @@
   font-weight: bold;
   margin-right: 5px;
   display: inline-flex;
-  font-size: 1.2vw;
   color: white;
   text-decoration: none;
+}
+
+.rmwrccccc-username > span {
+  font-size: 14px;
 }
 
 .rmwrccccc-username:hover {
@@ -263,7 +266,7 @@
   height: fit-content;
   overflow: hidden;
   word-wrap: break-word;
-  font-size: 1.2vw;
+  font-size: 14px;
 }
 
 .rmwrcc-replies {
@@ -305,7 +308,6 @@
   height: fit-content;
   overflow: hidden;
   word-wrap: break-word;
-  font-size: 1.2vw;
 }
 
 .rmwrccrc-username,
@@ -313,9 +315,14 @@
   font-weight: bold;
   margin-right: 5px;
   display: inline-flex;
-  font-size: 1.2vw;
   color: white;
   text-decoration: none;
+  font-size: 14px;
+}
+
+.rmwrccrc-username > span,
+.rmwrccrc-usernamereplying > span {
+  font-size: 14px;
 }
 
 .rmwrccrc-username:hover {
@@ -332,5 +339,5 @@
   height: fit-content;
   overflow: hidden;
   word-wrap: break-word;
-  font-size: 1.2vw;
+  font-size: 14px;
 }

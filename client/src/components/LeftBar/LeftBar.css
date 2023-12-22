@@ -8,7 +8,7 @@
   overflow: auto;
   position: fixed;
   top: 0;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .lb-container {
@@ -51,9 +51,11 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: var(--marg-big);
+  gap: 10px;
 }
 
-.lb-link {
+.lb-link,
+.lb-profile {
   color: #f1f1f1;
   text-decoration: none;
   position: relative;
@@ -61,9 +63,10 @@
   font-family: Roboto, Arial, sans-serif !important;
   display: flex;
   align-items: center;
-  gap: 10px;
-  width: fit-content;
-  padding: var(--pad-small) var(--pad-small) var(--pad-small) var(--pad-small);
+  gap: 20px;
+  width: 100%;
+  padding: var(--pad-extrasmall) var(--pad-small) var(--pad-extrasmall)
+    var(--pad-small);
   border-radius: 50px;
   cursor: pointer;
   font-size: 1.4rem;
@@ -75,15 +78,39 @@
   font-family: Roboto, Arial, sans-serif !important;
 }
 
-.lb-link:hover {
+.lb-link:hover,
+.lb-profile:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
 .lb-icon {
-  width: 30px;
-  height: auto;
+  width: 24px;
+  height: 24px;
 }
 
-.lb-create {
-  margin-bottom: 50px;
+.lb-profile {
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.lb-profile > img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.lb-profile-modal {
+  visibility: hidden;
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 15px;
+  margin-left: 15px;
+  z-index: 1111;
+}
+
+.lb-profile-modal-show {
+  visibility: visible;
 }
