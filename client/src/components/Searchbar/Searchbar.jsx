@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Searchbar.css";
 import { Link } from "react-router-dom";
 
 export const Searchbar = () => {
+  const [isFocused, setIsFocused] = useState(false);
   return (
     <div className="searchbar-container">
-      <form action="" className="sb-form">
-        <input type="search" placeholder="Search Recipes" />
-        <Link
-          to={{
-            pathname: "/",
-          }}
-          className="sb-link"
-        ></Link>
+      <form action="" className={`sb-form ${isFocused ? "has-focus" : ""}`}>
+        <input
+          id="search"
+          type="search"
+          placeholder="Search Recipes"
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+        />
       </form>
       <button type="submit">
         <svg

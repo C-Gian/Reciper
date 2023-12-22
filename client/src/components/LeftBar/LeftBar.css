@@ -54,14 +54,11 @@
 }
 
 .lb-link {
-  color: rgb(255, 255, 255);
+  color: #f1f1f1;
   text-decoration: none;
   position: relative;
   font-size: 15px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  font-family: var(--font-bold);
-  text-transform: uppercase;
+  font-family: Roboto, Arial, sans-serif !important;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -69,6 +66,13 @@
   padding: var(--pad-small) var(--pad-small) var(--pad-small) var(--pad-small);
   border-radius: 50px;
   cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.lb-link > h1 {
+  font-family: Roboto, Arial, sans-serif !important;
 }
 
 .lb-link:hover {
