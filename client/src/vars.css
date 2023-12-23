@@ -29,9 +29,7 @@
   --color-bg: #1a1a1a;
 
   /* fonts */
-  --font-header: "brandon-header";
-  --font-base: "GothamBook";
-  --font-bold: "brandon-bold";
+  --font-base: "Roboto", "Arial", sans-serif;
   --font-ballada: "ballada";
 
   /* margins paddings */

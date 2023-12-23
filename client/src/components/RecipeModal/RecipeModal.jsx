@@ -178,7 +178,7 @@ l1787 1276 1787 -1276 c984 -701 1794 -1278 1800 -1280 17 -7 19 8273 3 8407
                   </div>
                   <div className="rmwrcc-replies">
                     {comment.replies.map((reply, rIndex) => (
-                      <div className="rmwrccr-container">
+                      <div className="rmwrccr-container" key={rIndex}>
                         <div className="rmwrccrc-line">
                           <div></div>
                         </div>
