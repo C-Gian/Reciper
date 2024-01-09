@@ -23,7 +23,9 @@ export const LeftBar = () => {
       }
     };
 
-    fetchLoggedUser();
+    if (cookies.access_token) {
+      fetchLoggedUser();
+    }
   }, []);
 
   const handleSettingsClick = () => {

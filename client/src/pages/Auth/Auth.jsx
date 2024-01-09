@@ -23,13 +23,12 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
       const result = await axios.post("http://localhost:3001/auth/login", {
         username,
         password,
       });
-
+      console.log(result);
       setCookies("access_token", result.data.token);
       window.localStorage.setItem("userID", result.data.userID);
       navigate("/");

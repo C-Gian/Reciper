@@ -42,22 +42,21 @@ router.post("/register", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
-
-  //checking if the username exists
   const user = await UserModel.findOne({ username });
   if (!user) {
+    console.log("a");
     return res.json({ message: "User doesn't exists" });
   }
 
-  //checking if password match
   const isPasswordValid = await bcrypt.compare(password, user.password);
   if (!isPasswordValid) {
+    console.log("b");
     return res.json({ message: "Username or password is incorrect" });
   }
-
   const token = jwt.sign({ id: user._id }, "secret");
-
+  console.log("c");
   res.json({ token, userID: user._id });
+  console.log("d");
 });
 
 router.get("/user", verifyToken, async (req, res) => {
